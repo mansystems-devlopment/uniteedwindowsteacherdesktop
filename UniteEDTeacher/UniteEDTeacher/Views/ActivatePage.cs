@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniteEDTeacher.Views;
 
 namespace UniteEDTeacher
 {
@@ -19,7 +20,15 @@ namespace UniteEDTeacher
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
+            DashboardPage Dashboard = new DashboardPage();
+            Dashboard.Show();
+            this.Close();
 
+        }
+
+        private void txtUserId_TextChanged(object sender, EventArgs e)
+        {
+            txtUserId.Text = "";
         }
     }
 }
