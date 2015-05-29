@@ -1,0 +1,157 @@
+﻿<Page
+    x:Class="UniteEDTeacher.Views.Dashboard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniteEDTeacher.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+        <AppBar IsSticky="True" IsOpen="True">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+                <Image Width="90" Height="80" Source="ms-appx:///Images/Logo(120x120).png" Tapped="Image_Tapped_2" />
+                <Image Width="90" Height="80" Source="ms-appx:///Images/settings.png" Tapped="Image_Tapped_1" />
+                <Image Width="90" Height="80" Source="ms-appx:///Images/AB-Logout.png.png" Tapped="Image_Tapped" />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="59*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="ContentPanelApn" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <ScrollViewer >
+                <VariableSizedWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="6" ItemHeight="300" ItemWidth="300">
+                
+                    <Grid Height="200" Width="200" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="89*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderBrush="Transparent" Name="myclassroom" FontFamily="Segoe WP Light" Width="206" Height="176" Margin="-3,-3,-3,5" >
+                            <Button.Background>
+                                <ImageBrush Stretch="Fill"  ImageSource="ms-appx:///Images/Classroom(150x150).png"/>
+                            </Button.Background>
+
+                        </Button>
+                        <TextBlock  Text="MY CLASSROOM" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Height="24" Grid.RowSpan="2" />
+                    </Grid>
+                    <Grid Height="200" Width="200" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="89*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderBrush="Transparent" Name="mycourses" FontFamily="Segoe WP Light" Width="206" Height="176" Margin="-3,-3,-3,5" Click="mycourses_Click" >
+                            <Button.Background>
+                                <ImageBrush Stretch="Fill"  ImageSource="ms-appx:///Images/Courses(150x150).png"/>
+                            </Button.Background>
+
+                        </Button>
+                        <TextBlock  Text="MY COURSES" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Height="24" Grid.RowSpan="2" />
+                    </Grid>
+                    <Grid Height="200" Width="200" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="89*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderBrush="Transparent" Name="myfiles" FontFamily="Segoe WP Light" Width="206" Height="176" Margin="-3,-3,-3,5" Click="myfiles_Click" >
+                            <Button.Background>
+                                <ImageBrush Stretch="Fill"  ImageSource="ms-appx:///Images/Files(150x150).png"/>
+                            </Button.Background>
+
+                        </Button>
+                        <TextBlock  Text="MY FILES" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Height="24" Grid.RowSpan="2" />
+                    </Grid>
+                    <Grid Height="200" Width="200" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="89*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderBrush="Transparent" Name="mycalendar" FontFamily="Segoe WP Light" Width="206" Height="176" Margin="-3,-3,-3,5" Click="mycalendar_Click">
+                            <Button.Background>
+                                <ImageBrush Stretch="Fill"  ImageSource="ms-appx:///Images/Calendar(150x150).png"/>
+                            </Button.Background>
+
+                        </Button>
+                        <TextBlock  Text="MY CALENDAR" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Height="24" Grid.RowSpan="2" />
+                    </Grid>
+                    <Grid Height="200" Width="200" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="89*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderBrush="Transparent" Name="mybooks" FontFamily="Segoe WP Light" Width="206" Height="176" Margin="-3,-3,-3,5" Click="mybooks_Click" >
+                            <Button.Background>
+                                <ImageBrush Stretch="Fill"  ImageSource="ms-appx:///Images/Books(150x150).png"/>
+                            </Button.Background>
+
+                        </Button>
+                        <TextBlock  Text="MY BOOKS" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Height="24" Grid.RowSpan="2" />
+                    </Grid>
+             
+                    <Grid Height="200" Width="200" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="89*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderBrush="Transparent" Name="myshop" FontFamily="Segoe WP Light" Width="206" Height="176" Margin="-3,-3,-3,5" Click="myshop_Click" >
+                            <Button.Background>
+                                <ImageBrush Stretch="Fill"  ImageSource="ms-appx:///Images/Media(150x150).png"/>
+                            </Button.Background>
+
+                        </Button>
+                        <TextBlock  Text="MEDIA" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Height="24" Grid.RowSpan="2" />
+                    </Grid>
+                   
+                    <Grid Height="200" Width="200" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="89*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Button BorderBrush="Transparent" Name="help" FontFamily="Segoe WP Light" Width="206" Height="176" Margin="-3,-3,-3,5" Click="help_Click" >
+                            <Button.Background>
+                                <ImageBrush Stretch="Fill"  ImageSource="ms-appx:///Images/Help(150x150).png"/>
+                            </Button.Background>
+
+                        </Button>
+                        <TextBlock  Text="HELP" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Height="24" Grid.RowSpan="2" />
+                    </Grid>
+               
+                    <Grid Height="200" Width="200" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="89*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Button Visibility="Visible" BorderBrush="Transparent" Name="cloudbanc" FontFamily="Segoe WP Light" Width="206" Height="176" Margin="-3,-3,-3,5" Click="cloudbanc_Click" >
+                            <Button.Background>
+                                <ImageBrush  Stretch="Fill"  ImageSource="ms-appx:///Images/CB_windows(150x150).png"/>
+                            </Button.Background>
+
+                        </Button>
+                        <TextBlock Visibility="Visible" Text="CLOUDBANC" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Height="24" Grid.RowSpan="2" />
+                    </Grid>
+                    <Grid Height="200" Width="200" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="89*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Button Visibility="Collapsed" BorderBrush="Transparent" Name="clicker" FontFamily="Segoe WP Light" Width="206" Height="176" Margin="-3,-3,-3,5" >
+                            <Button.Background>
+                                <ImageBrush  Stretch="Fill"  ImageSource="ms-appx:///Images/Clicker(150x150).png"/>
+                            </Button.Background>
+
+                        </Button>
+                        <TextBlock Visibility="Collapsed" Text="CLICKER" FontSize="20" TextAlignment="Center" VerticalAlignment="Bottom" Height="24" Grid.RowSpan="2" />
+                    </Grid>
+                   
+                    
+                </VariableSizedWrapGrid>
+            </ScrollViewer>
+        </Grid>
+        <TextBlock HorizontalAlignment="Center"  TextWrapping="Wrap" Text="UniteED Teacher MENU" VerticalAlignment="Center" FontSize="36"/>
+
+    </Grid>
+   
+</Page>

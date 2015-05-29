@@ -1,0 +1,59 @@
+﻿<common:LayoutAwarePage
+    x:Class="UniteEDTeacher.Views.MyTicketsPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniteEDTeacher.Views"
+    xmlns:common="using:UniteEDTeacher.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">My Application</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+
+    <Grid Background="#FFECECEC">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="319*"/>
+        </Grid.RowDefinitions>
+        <!-- Back button and page title -->
+        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <TextBlock x:Name="pageTitle"  HorizontalAlignment="Center" TextWrapping="Wrap" Text="MY SUBMITTED TICKETS" VerticalAlignment="Center" FontSize="36" Grid.Column="1" Style="{StaticResource PageHeaderTextStyle}" Margin="392,46,358,44" FontWeight="Normal" Width="496" Foreground="White"/>
+        </Grid>
+        <ListBox HorizontalAlignment="Left" Grid.Row="1" Height="auto"  Width="auto" VerticalAlignment="Top" Margin="10,0,0,-31">
+            <ListView Name="lsMyTickets" ItemsSource="{Binding}" Header="My Submitted Tickets" SelectionChanged="lsMyTickets_SelectionChanged">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border>
+                            <StackPanel>
+                                <TextBlock Name="txtIhave" TextWrapping="Wrap" Text="{Binding IHave}" VerticalAlignment="Top" Height="33" Width="214" Foreground="#FF0E0000" FontSize="20" FontFamily="Segoe UI"/>
+                                <TextBlock Name="txtWithMy" TextWrapping="Wrap" Text="{Binding WithMy}" Width="214" Foreground="#FF0E0000" FontSize="20" FontFamily="Segoe UI" Grid.Row="1"/>
+                                <TextBlock Name="txtDate" TextWrapping="Wrap" Text="{Binding DateIssued}" VerticalAlignment="Top" Height="36" Width="214" Foreground="#FF0E0000" FontSize="20" FontFamily="Segoe UI" Grid.Row="1"/>
+                            </StackPanel>
+
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </ListBox>
+
+
+    </Grid>
+</common:LayoutAwarePage>
