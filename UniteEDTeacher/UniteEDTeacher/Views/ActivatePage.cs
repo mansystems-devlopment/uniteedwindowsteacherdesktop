@@ -20,10 +20,10 @@ namespace UniteEDTeacher
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
-            DashboardPage Dashboard = new DashboardPage();
-            Dashboard.Show();
-            this.Close();
-
+            //this.Close();
+            DashboardPage dashboardPage = new DashboardPage();
+            dashboardPage.Show();
+            this.Hide();
         }
 
         private void txtUserId_TextChanged(object sender, EventArgs e)

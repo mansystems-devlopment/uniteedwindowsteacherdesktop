@@ -29,26 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardPage));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnMyCourses = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnEReader = new System.Windows.Forms.Button();
+            this.btnClassRoom = new System.Windows.Forms.Button();
+            this.btnSmartLink = new System.Windows.Forms.Button();
+            this.btnCloudbanc = new System.Windows.Forms.Button();
+            this.btnShop = new System.Windows.Forms.Button();
+            this.btnBookStore = new System.Windows.Forms.Button();
+            this.btnMedia = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listView1
+            // panel1
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.MenuText;
-            this.listView1.ForeColor = System.Drawing.Color.Transparent;
-            this.listView1.Location = new System.Drawing.Point(-3, -4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1138, 661);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1482, 105);
+            this.panel1.TabIndex = 9;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel1.Controls.Add(this.btnMyCourses);
+            this.flowLayoutPanel1.Controls.Add(this.btnEReader);
+            this.flowLayoutPanel1.Controls.Add(this.btnClassRoom);
+            this.flowLayoutPanel1.Controls.Add(this.btnSmartLink);
+            this.flowLayoutPanel1.Controls.Add(this.btnCloudbanc);
+            this.flowLayoutPanel1.Controls.Add(this.btnShop);
+            this.flowLayoutPanel1.Controls.Add(this.btnBookStore);
+            this.flowLayoutPanel1.Controls.Add(this.btnMedia);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(-3, 105);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(30);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1490, 610);
+            this.flowLayoutPanel1.TabIndex = 10;
             // 
             // btnMyCourses
             // 
@@ -58,158 +83,184 @@
             this.btnMyCourses.FlatAppearance.BorderSize = 0;
             this.btnMyCourses.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btnMyCourses.ForeColor = System.Drawing.Color.Gray;
-            this.btnMyCourses.Location = new System.Drawing.Point(78, 136);
+            this.btnMyCourses.Location = new System.Drawing.Point(30, 30);
+            this.btnMyCourses.Margin = new System.Windows.Forms.Padding(30);
             this.btnMyCourses.Name = "btnMyCourses";
-            this.btnMyCourses.Size = new System.Drawing.Size(141, 146);
+            this.btnMyCourses.Size = new System.Drawing.Size(172, 183);
             this.btnMyCourses.TabIndex = 1;
             this.btnMyCourses.Text = "MY COURSES";
             this.btnMyCourses.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMyCourses.UseVisualStyleBackColor = false;
             this.btnMyCourses.Click += new System.EventHandler(this.btnMyCourses_Click);
             // 
-            // button1
+            // btnEReader
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(282, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 146);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "E-READER";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEReader.BackColor = System.Drawing.Color.Transparent;
+            this.btnEReader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEReader.BackgroundImage")));
+            this.btnEReader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEReader.FlatAppearance.BorderSize = 0;
+            this.btnEReader.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnEReader.ForeColor = System.Drawing.Color.Gray;
+            this.btnEReader.Location = new System.Drawing.Point(262, 30);
+            this.btnEReader.Margin = new System.Windows.Forms.Padding(30);
+            this.btnEReader.Name = "btnEReader";
+            this.btnEReader.Size = new System.Drawing.Size(172, 183);
+            this.btnEReader.TabIndex = 2;
+            this.btnEReader.Text = "E READER";
+            this.btnEReader.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEReader.UseVisualStyleBackColor = false;
+            this.btnEReader.Click += new System.EventHandler(this.btnEReader_Click);
             // 
-            // button2
+            // btnClassRoom
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gray;
-            this.button2.Location = new System.Drawing.Point(486, 136);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 146);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "CLASSROOM";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnClassRoom.BackColor = System.Drawing.Color.Transparent;
+            this.btnClassRoom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClassRoom.BackgroundImage")));
+            this.btnClassRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClassRoom.FlatAppearance.BorderSize = 0;
+            this.btnClassRoom.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnClassRoom.ForeColor = System.Drawing.Color.Gray;
+            this.btnClassRoom.Location = new System.Drawing.Point(494, 30);
+            this.btnClassRoom.Margin = new System.Windows.Forms.Padding(30);
+            this.btnClassRoom.Name = "btnClassRoom";
+            this.btnClassRoom.Size = new System.Drawing.Size(172, 183);
+            this.btnClassRoom.TabIndex = 3;
+            this.btnClassRoom.Text = "CLASS ROOM";
+            this.btnClassRoom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClassRoom.UseVisualStyleBackColor = false;
+            this.btnClassRoom.Click += new System.EventHandler(this.btnClassRoom_Click);
             // 
-            // button3
+            // btnSmartLink
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Gray;
-            this.button3.Location = new System.Drawing.Point(693, 136);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 146);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "SMART LINK";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSmartLink.BackColor = System.Drawing.Color.Transparent;
+            this.btnSmartLink.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSmartLink.BackgroundImage")));
+            this.btnSmartLink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSmartLink.FlatAppearance.BorderSize = 0;
+            this.btnSmartLink.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnSmartLink.ForeColor = System.Drawing.Color.Gray;
+            this.btnSmartLink.Location = new System.Drawing.Point(726, 30);
+            this.btnSmartLink.Margin = new System.Windows.Forms.Padding(30);
+            this.btnSmartLink.Name = "btnSmartLink";
+            this.btnSmartLink.Size = new System.Drawing.Size(172, 183);
+            this.btnSmartLink.TabIndex = 4;
+            this.btnSmartLink.Text = "SMARTLINK";
+            this.btnSmartLink.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSmartLink.UseVisualStyleBackColor = false;
+            this.btnSmartLink.Click += new System.EventHandler(this.btnSmartLink_Click);
             // 
-            // button4
+            // btnCloudbanc
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Gray;
-            this.button4.Location = new System.Drawing.Point(889, 136);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 146);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "CLOUDBANC";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnCloudbanc.BackColor = System.Drawing.Color.Transparent;
+            this.btnCloudbanc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCloudbanc.BackgroundImage")));
+            this.btnCloudbanc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCloudbanc.FlatAppearance.BorderSize = 0;
+            this.btnCloudbanc.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnCloudbanc.ForeColor = System.Drawing.Color.Gray;
+            this.btnCloudbanc.Location = new System.Drawing.Point(958, 30);
+            this.btnCloudbanc.Margin = new System.Windows.Forms.Padding(30);
+            this.btnCloudbanc.Name = "btnCloudbanc";
+            this.btnCloudbanc.Size = new System.Drawing.Size(172, 183);
+            this.btnCloudbanc.TabIndex = 5;
+            this.btnCloudbanc.Text = "CLOUDBANC";
+            this.btnCloudbanc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCloudbanc.UseVisualStyleBackColor = false;
+            this.btnCloudbanc.Click += new System.EventHandler(this.btnCloudbanc_Click);
             // 
-            // button5
+            // btnShop
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Gray;
-            this.button5.Location = new System.Drawing.Point(78, 355);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 146);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "MEDIA";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnShop.BackColor = System.Drawing.Color.Transparent;
+            this.btnShop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShop.BackgroundImage")));
+            this.btnShop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnShop.FlatAppearance.BorderSize = 0;
+            this.btnShop.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnShop.ForeColor = System.Drawing.Color.Gray;
+            this.btnShop.Location = new System.Drawing.Point(1190, 30);
+            this.btnShop.Margin = new System.Windows.Forms.Padding(30);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnShop.Size = new System.Drawing.Size(172, 183);
+            this.btnShop.TabIndex = 8;
+            this.btnShop.Text = "SHOP";
+            this.btnShop.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnShop.UseVisualStyleBackColor = false;
+            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
             // 
-            // button6
+            // btnBookStore
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Gray;
-            this.button6.Location = new System.Drawing.Point(282, 355);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(141, 146);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "BOOK STORE";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnBookStore.BackColor = System.Drawing.Color.Transparent;
+            this.btnBookStore.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBookStore.BackgroundImage")));
+            this.btnBookStore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBookStore.FlatAppearance.BorderSize = 0;
+            this.btnBookStore.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnBookStore.ForeColor = System.Drawing.Color.Gray;
+            this.btnBookStore.Location = new System.Drawing.Point(30, 273);
+            this.btnBookStore.Margin = new System.Windows.Forms.Padding(30);
+            this.btnBookStore.Name = "btnBookStore";
+            this.btnBookStore.Size = new System.Drawing.Size(172, 183);
+            this.btnBookStore.TabIndex = 7;
+            this.btnBookStore.Text = "BOOK STORE";
+            this.btnBookStore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBookStore.UseVisualStyleBackColor = false;
+            this.btnBookStore.Click += new System.EventHandler(this.btnBookStore_Click);
             // 
-            // button7
+            // btnMedia
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Gray;
-            this.button7.Location = new System.Drawing.Point(486, 355);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 146);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "SHOP";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnMedia.BackColor = System.Drawing.Color.Transparent;
+            this.btnMedia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMedia.BackgroundImage")));
+            this.btnMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMedia.FlatAppearance.BorderSize = 0;
+            this.btnMedia.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnMedia.ForeColor = System.Drawing.Color.Gray;
+            this.btnMedia.Location = new System.Drawing.Point(262, 273);
+            this.btnMedia.Margin = new System.Windows.Forms.Padding(30);
+            this.btnMedia.Name = "btnMedia";
+            this.btnMedia.Size = new System.Drawing.Size(172, 183);
+            this.btnMedia.TabIndex = 6;
+            this.btnMedia.Text = "MEDIA";
+            this.btnMedia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMedia.UseVisualStyleBackColor = false;
+            this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(304, 77);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // DashboardPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1130, 632);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnMyCourses);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1482, 741);
+            this.ControlBox = false;
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "DashboardPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btnMyCourses;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnEReader;
+        private System.Windows.Forms.Button btnClassRoom;
+        private System.Windows.Forms.Button btnSmartLink;
+        private System.Windows.Forms.Button btnCloudbanc;
+        private System.Windows.Forms.Button btnMedia;
+        private System.Windows.Forms.Button btnBookStore;
+        private System.Windows.Forms.Button btnShop;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
