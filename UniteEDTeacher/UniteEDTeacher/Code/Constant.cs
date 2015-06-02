@@ -17,6 +17,7 @@ namespace UniteEDTeacher.Code
         public static string deviceSerialNumber = "2d9090da-27b1-4797-a3aa-7d762f553ddd";
         public static string deviceOS = "Windows 8";
         public static string carrier = "(No Network)";
-        public static string countryCode = "SA";
+        public static string countryCode = "SA"; 
+        string url = "(http://41.0.104.2:8081/rest/)";
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace UniteEDTeacher.Views
 {
-    partial class BookStorePage
+    partial class CloudbancForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.StorewebBrowser = new System.Windows.Forms.WebBrowser();
+            this.CloudbancwebBrowser = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
-            // StorewebBrowser
+            // CloudbancwebBrowser
             // 
-            this.StorewebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StorewebBrowser.Location = new System.Drawing.Point(0, 0);
-            this.StorewebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.StorewebBrowser.Name = "StorewebBrowser";
-            this.StorewebBrowser.Size = new System.Drawing.Size(1484, 739);
-            this.StorewebBrowser.TabIndex = 0;
+            this.CloudbancwebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CloudbancwebBrowser.Location = new System.Drawing.Point(0, 0);
+            this.CloudbancwebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.CloudbancwebBrowser.Name = "CloudbancwebBrowser";
+            this.CloudbancwebBrowser.Size = new System.Drawing.Size(1484, 743);
+            this.CloudbancwebBrowser.TabIndex = 0;
             // 
-            // BookStorePage
+            // CloudbancPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 739);
-            this.Controls.Add(this.StorewebBrowser);
-            this.Name = "BookStorePage";
+            this.ClientSize = new System.Drawing.Size(1484, 743);
+            this.Controls.Add(this.CloudbancwebBrowser);
+            this.Name = "CloudbancPage";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Store";
+            this.Text = "Cloudbanc";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser StorewebBrowser;
+        private System.Windows.Forms.WebBrowser CloudbancwebBrowser;
     }
 }

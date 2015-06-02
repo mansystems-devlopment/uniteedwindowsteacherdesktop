@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UniteEDTeacher.Views
 {
-    public partial class BookStorePage : BaseForm
+    public partial class CloudbancForm : BaseForm
     {
-        public BookStorePage()
+        public CloudbancForm()
         {
             InitializeComponent();
         }

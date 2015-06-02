@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UniteEDTeacher.Views
 {
-    public partial class DashboardPage : Form
+    public partial class DashboardForm : Form
     {
-        public DashboardPage()
+        public DashboardForm()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace UniteEDTeacher.Views
 
         private void btnBookStore_Click(object sender, EventArgs e)
         {
-            BookStorePage myForm = new BookStorePage();
+            BookStoreForm myForm = new BookStoreForm();
 
             myForm.ShowDialog();
         }
@@ -53,7 +53,7 @@ namespace UniteEDTeacher.Views
 
         private void btnCloudbanc_Click(object sender, EventArgs e)
         {
-            CloudbancPage Cloudbanc = new CloudbancPage();
+            CloudbancForm Cloudbanc = new CloudbancForm();
 
             Cloudbanc.ShowDialog();
         }
@@ -67,7 +67,7 @@ namespace UniteEDTeacher.Views
 
         private void btnMedia_Click(object sender, EventArgs e)
         {
-            MediaPage myForm = new MediaPage();
+            MediaForm myForm = new MediaForm();
 
             myForm.ShowDialog();
         }

@@ -47,6 +47,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -77,35 +81,35 @@
     <Compile Include="Views\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\BookStorePage.cs">
+    <Compile Include="Views\BookStoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\BookStorePage.Designer.cs">
-      <DependentUpon>BookStorePage.cs</DependentUpon>
+    <Compile Include="Views\BookStoreForm.Designer.cs">
+      <DependentUpon>BookStoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CloudbancPage.cs">
+    <Compile Include="Views\CloudbancForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CloudbancPage.Designer.cs">
-      <DependentUpon>CloudbancPage.cs</DependentUpon>
+    <Compile Include="Views\CloudbancForm.Designer.cs">
+      <DependentUpon>CloudbancForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardPage.cs">
+    <Compile Include="Views\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\DashboardPage.Designer.cs">
-      <DependentUpon>DashboardPage.cs</DependentUpon>
+    <Compile Include="Views\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MediaPage.cs">
+    <Compile Include="Views\MediaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MediaPage.Designer.cs">
-      <DependentUpon>MediaPage.cs</DependentUpon>
+    <Compile Include="Views\MediaForm.Designer.cs">
+      <DependentUpon>MediaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MyCourse.cs">
+    <Compile Include="Views\MyCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MyCourse.Designer.cs">
-      <DependentUpon>MyCourse.cs</DependentUpon>
+    <Compile Include="Views\MyCourseForm.Designer.cs">
+      <DependentUpon>MyCourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ShopForm.cs">
       <SubType>Form</SubType>
@@ -132,20 +136,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\BookStorePage.resx">
-      <DependentUpon>BookStorePage.cs</DependentUpon>
+    <EmbeddedResource Include="Views\BookStoreForm.resx">
+      <DependentUpon>BookStoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\CloudbancPage.resx">
-      <DependentUpon>CloudbancPage.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CloudbancForm.resx">
+      <DependentUpon>CloudbancForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardPage.resx">
-      <DependentUpon>DashboardPage.cs</DependentUpon>
+    <EmbeddedResource Include="Views\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\MediaPage.resx">
-      <DependentUpon>MediaPage.cs</DependentUpon>
+    <EmbeddedResource Include="Views\MediaForm.resx">
+      <DependentUpon>MediaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\MyCourse.resx">
-      <DependentUpon>MyCourse.cs</DependentUpon>
+    <EmbeddedResource Include="Views\MyCourseForm.resx">
+      <DependentUpon>MyCourseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ShopForm.resx">
       <DependentUpon>ShopForm.cs</DependentUpon>
@@ -153,6 +157,7 @@
     <EmbeddedResource Include="Views\SmartLinkPage.resx">
       <DependentUpon>SmartLinkPage.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,7 +173,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />
-    <Folder Include="Code\" />
     <Folder Include="Serialization\" />
   </ItemGroup>
   <ItemGroup>

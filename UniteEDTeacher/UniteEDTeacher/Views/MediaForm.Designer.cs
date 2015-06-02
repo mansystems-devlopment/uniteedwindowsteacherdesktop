@@ -1,6 +1,6 @@
 ﻿namespace UniteEDTeacher.Views
 {
-    partial class MediaPage
+    partial class MediaForm
     {
         /// <summary>
         /// Required designer variable.

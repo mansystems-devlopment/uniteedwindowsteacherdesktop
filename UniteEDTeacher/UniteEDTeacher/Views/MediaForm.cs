@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UniteEDTeacher.Views
 {
-    public partial class MediaPage : BaseForm
+    public partial class MediaForm : BaseForm
     {
-        public MediaPage()
+        public MediaForm()
         {
             InitializeComponent();
         }

@@ -8,10 +8,10 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Core;
+/*using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.UI.Core;
-using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls;*/
 
 namespace UniteEDTeacher.Code
 {
@@ -33,7 +33,7 @@ namespace UniteEDTeacher.Code
 
 
 
-                await Windows.System.Threading.ThreadPool.RunAsync(
+                await System.Threading.ThreadPool.RunAsync(
                (workItem) =>
                {
                    state.ResponseCallBack(httpresponse);

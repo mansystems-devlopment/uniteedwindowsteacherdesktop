@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
 //using Windows.Networking;
 //using Windows.Networking.Connectivity;
 //using Windows.Storage;
@@ -17,6 +18,7 @@ namespace UniteEDTeacher.Code
     {
         public static void SaveSettings(ApplicationDataContainer localSettings, string settingName, string settingValue)
         {
+            
             if (!localSettings.Containers.ContainsKey("AppSettings"))
             {
                 localSettings = localSettings.CreateContainer("AppSettings", Windows.Storage.ApplicationDataCreateDisposition.Always);
@@ -118,6 +120,8 @@ namespace UniteEDTeacher.Code
             return qrcode;
 
         }
+
+        //Dns.getHostAddresses
         public static HostName getIPAddress()
         {
 
