@@ -32,13 +32,20 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnMyCourses = new System.Windows.Forms.Button();
             this.btnEReader = new System.Windows.Forms.Button();
-            this.btnClassRoom = new System.Windows.Forms.Button();
-            this.btnSmartLink = new System.Windows.Forms.Button();
             this.btnCloudbanc = new System.Windows.Forms.Button();
-            this.btnShop = new System.Windows.Forms.Button();
             this.btnBookStore = new System.Windows.Forms.Button();
             this.btnMedia = new System.Windows.Forms.Button();
+            this.btnClassRoom = new System.Windows.Forms.Button();
+            this.btnSmartLink = new System.Windows.Forms.Button();
+            this.btnShop = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -55,10 +62,10 @@
             this.flowLayoutPanel1.Controls.Add(this.btnClassRoom);
             this.flowLayoutPanel1.Controls.Add(this.btnSmartLink);
             this.flowLayoutPanel1.Controls.Add(this.btnShop);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 70);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 6);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1088, 522);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1139, 564);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // btnMyCourses
@@ -97,6 +104,60 @@
             this.btnEReader.UseVisualStyleBackColor = false;
             this.btnEReader.Click += new System.EventHandler(this.btnEReader_Click);
             // 
+            // btnCloudbanc
+            // 
+            this.btnCloudbanc.BackColor = System.Drawing.Color.Transparent;
+            this.btnCloudbanc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCloudbanc.BackgroundImage")));
+            this.btnCloudbanc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCloudbanc.FlatAppearance.BorderSize = 0;
+            this.btnCloudbanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloudbanc.ForeColor = System.Drawing.Color.Gray;
+            this.btnCloudbanc.Location = new System.Drawing.Point(550, 24);
+            this.btnCloudbanc.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnCloudbanc.Name = "btnCloudbanc";
+            this.btnCloudbanc.Size = new System.Drawing.Size(220, 220);
+            this.btnCloudbanc.TabIndex = 5;
+            this.btnCloudbanc.Text = "CLOUDBANC";
+            this.btnCloudbanc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCloudbanc.UseVisualStyleBackColor = false;
+            this.btnCloudbanc.Click += new System.EventHandler(this.btnCloudbanc_Click);
+            // 
+            // btnBookStore
+            // 
+            this.btnBookStore.BackColor = System.Drawing.Color.Transparent;
+            this.btnBookStore.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBookStore.BackgroundImage")));
+            this.btnBookStore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBookStore.FlatAppearance.BorderSize = 0;
+            this.btnBookStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookStore.ForeColor = System.Drawing.Color.Gray;
+            this.btnBookStore.Location = new System.Drawing.Point(814, 24);
+            this.btnBookStore.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnBookStore.Name = "btnBookStore";
+            this.btnBookStore.Size = new System.Drawing.Size(220, 220);
+            this.btnBookStore.TabIndex = 7;
+            this.btnBookStore.Text = "BOOK STORE";
+            this.btnBookStore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBookStore.UseVisualStyleBackColor = false;
+            this.btnBookStore.Click += new System.EventHandler(this.btnBookStore_Click);
+            // 
+            // btnMedia
+            // 
+            this.btnMedia.BackColor = System.Drawing.Color.Transparent;
+            this.btnMedia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMedia.BackgroundImage")));
+            this.btnMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMedia.FlatAppearance.BorderSize = 0;
+            this.btnMedia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedia.ForeColor = System.Drawing.Color.Gray;
+            this.btnMedia.Location = new System.Drawing.Point(22, 292);
+            this.btnMedia.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnMedia.Name = "btnMedia";
+            this.btnMedia.Size = new System.Drawing.Size(220, 220);
+            this.btnMedia.TabIndex = 6;
+            this.btnMedia.Text = "MEDIA";
+            this.btnMedia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMedia.UseVisualStyleBackColor = false;
+            this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
+            // 
             // btnClassRoom
             // 
             this.btnClassRoom.BackColor = System.Drawing.Color.Transparent;
@@ -133,24 +194,6 @@
             this.btnSmartLink.UseVisualStyleBackColor = false;
             this.btnSmartLink.Click += new System.EventHandler(this.btnSmartLink_Click);
             // 
-            // btnCloudbanc
-            // 
-            this.btnCloudbanc.BackColor = System.Drawing.Color.Transparent;
-            this.btnCloudbanc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCloudbanc.BackgroundImage")));
-            this.btnCloudbanc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCloudbanc.FlatAppearance.BorderSize = 0;
-            this.btnCloudbanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCloudbanc.ForeColor = System.Drawing.Color.Gray;
-            this.btnCloudbanc.Location = new System.Drawing.Point(550, 24);
-            this.btnCloudbanc.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
-            this.btnCloudbanc.Name = "btnCloudbanc";
-            this.btnCloudbanc.Size = new System.Drawing.Size(220, 220);
-            this.btnCloudbanc.TabIndex = 5;
-            this.btnCloudbanc.Text = "CLOUDBANC";
-            this.btnCloudbanc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCloudbanc.UseVisualStyleBackColor = false;
-            this.btnCloudbanc.Click += new System.EventHandler(this.btnCloudbanc_Click);
-            // 
             // btnShop
             // 
             this.btnShop.BackColor = System.Drawing.Color.Transparent;
@@ -170,54 +213,53 @@
             this.btnShop.UseVisualStyleBackColor = false;
             this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
             // 
-            // btnBookStore
+            // pictureBox1
             // 
-            this.btnBookStore.BackColor = System.Drawing.Color.Transparent;
-            this.btnBookStore.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBookStore.BackgroundImage")));
-            this.btnBookStore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBookStore.FlatAppearance.BorderSize = 0;
-            this.btnBookStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btnBookStore.ForeColor = System.Drawing.Color.Gray;
-            this.btnBookStore.Location = new System.Drawing.Point(814, 24);
-            this.btnBookStore.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
-            this.btnBookStore.Name = "btnBookStore";
-            this.btnBookStore.Size = new System.Drawing.Size(220, 220);
-            this.btnBookStore.TabIndex = 7;
-            this.btnBookStore.Text = "BOOK STORE";
-            this.btnBookStore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBookStore.UseVisualStyleBackColor = false;
-            this.btnBookStore.Click += new System.EventHandler(this.btnBookStore_Click);
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 80);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnMedia
+            // splitContainer1
             // 
-            this.btnMedia.BackColor = System.Drawing.Color.Transparent;
-            this.btnMedia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMedia.BackgroundImage")));
-            this.btnMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMedia.FlatAppearance.BorderSize = 0;
-            this.btnMedia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedia.ForeColor = System.Drawing.Color.Gray;
-            this.btnMedia.Location = new System.Drawing.Point(22, 292);
-            this.btnMedia.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
-            this.btnMedia.Name = "btnMedia";
-            this.btnMedia.Size = new System.Drawing.Size(220, 220);
-            this.btnMedia.TabIndex = 6;
-            this.btnMedia.Text = "MEDIA";
-            this.btnMedia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMedia.UseVisualStyleBackColor = false;
-            this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer1.Size = new System.Drawing.Size(1161, 692);
+            this.splitContainer1.SplitterDistance = 107;
+            this.splitContainer1.TabIndex = 12;
             // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 602);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1161, 692);
+            this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -233,5 +275,7 @@
         private System.Windows.Forms.Button btnBookStore;
         private System.Windows.Forms.Button btnShop;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

@@ -72,8 +72,7 @@ namespace UniteEDTeacher.Code
                     }
                     catch (Exception ex)
                     {
-                        // Deployment.Current.Dispatcher.BeginInvoke((Action)(() => MessageBox.Show(ex.Message + "\n" + ex.StackTrace)));
-
+                        //Deployment.Current.Dispatcher.BeginInvoke((Action)(() => MessageBox.Show(ex.Message + "\n" + ex.StackTrace)));
 
                         Debug.WriteLine(ex.Message + "\n" + ex.StackTrace);
 
@@ -124,9 +123,6 @@ namespace UniteEDTeacher.Code
                     }
                     catch (Exception ex)
                     {
-                        // Deployment.Current.Dispatcher.BeginInvoke((Action)(() => MessageBox.Show(ex.Message + "\n" + ex.StackTrace)));
-
-
                         Debug.WriteLine(ex.Message + "\n" + ex.StackTrace);
 
                     }

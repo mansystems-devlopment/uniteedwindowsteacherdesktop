@@ -56,6 +56,8 @@ namespace UniteEDTeacher
                     postData += "&dsn=";
                     postData += Constant.deviceSerialNumber;
 
+                    Form frm = this;
+
                     net.PostData((httpResponse) =>
                     {
                         try
@@ -80,9 +82,18 @@ namespace UniteEDTeacher
 
                                     }
 
-                                    DashboardForm dashboardPage = new DashboardForm();
-                                    dashboardPage.Show();
-                                    this.Hide();
+                                    this.Invoke(
+                                        (Action)(() =>
+                                            {
+
+                                                frm.Hide();
+                                                DashboardForm dashboardPage = new DashboardForm();
+                                                dashboardPage.Show();
+                                            }
+
+                                        ));
+
+
 
                                 }
                                 else
@@ -102,7 +113,8 @@ namespace UniteEDTeacher
                     }, "ActivateUser?about", postData);
 
                 }
-                else {
+                else
+                {
 
                     MessageBox.Show("Please Enter the user ID", "Activation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
@@ -111,9 +123,9 @@ namespace UniteEDTeacher
             else
             {
                 MessageBox.Show("Could not connect to internet", "Network connection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                
+
             }
-  
+
         }
 
         private void ActivatePage_FormClosing(object sender, FormClosingEventArgs e)
