@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 /*using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.UI.Core;
@@ -31,15 +32,15 @@ namespace UniteEDTeacher.Code
                 State state = (State)asynchronousResult.AsyncState;
                 HttpWebResponse httpresponse = (HttpWebResponse)state.WebRequest.EndGetResponse(asynchronousResult);
 
+               await Dispatcher.CurrentDispatcher.BeginInvoke(
 
+                   new Action(
 
-                await System.Threading.ThreadPool.RunAsync(
-               (workItem) =>
-               {
-                   state.ResponseCallBack(httpresponse);
-               });
+                       () => {
+                           state.ResponseCallBack(httpresponse);
+                       })
 
-
+                   );
             }
             catch (WebException ex)
             {

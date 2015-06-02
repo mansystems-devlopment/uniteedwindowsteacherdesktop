@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using System.Windows.Media.Imaging;
+using ZXing;
+using System.Drawing;
+using System.Drawing.Imaging;
+using Newtonsoft.Json;
 //using Windows.Networking;
 //using Windows.Networking.Connectivity;
 //using Windows.Storage;
@@ -16,55 +21,32 @@ namespace UniteEDTeacher.Code
 {
     static class Helpers
     {
-        public static void SaveSettings(ApplicationDataContainer localSettings, string settingName, string settingValue)
+        public static void SaveSettings(string settingName, string settingValue)
         {
+
+            ModuleSetting lms = new ModuleSetting();
+            lms.DEFAULT_FILENAME = settingName;
+            lms.SettingName = settingName;
+            lms.SettingData = settingValue;
+            lms.Save();
+        }
+
+        public static void SaveModuleSettings(List<ModuleSetting> settings)
+        {
+            foreach (ModuleSetting setting in settings) {
+
+                ModuleSetting lms = new ModuleSetting();
+                lms.Save();
+            }            
             
-            if (!localSettings.Containers.ContainsKey("AppSettings"))
-            {
-                localSettings = localSettings.CreateContainer("AppSettings", Windows.Storage.ApplicationDataCreateDisposition.Always);
-                Debug.WriteLine("New Container created");
-            }
-            else
-            {
-                Debug.WriteLine("Container already existed");
-            }
-            if (localSettings.Containers.ContainsKey("AppSettings"))
-            {
-                if (localSettings.Containers["AppSettings"].Values.ContainsKey(settingName))
-                    localSettings.Containers["AppSettings"].Values[settingName] = settingValue;
-                else
-                    localSettings.Containers["AppSettings"].Values.Add(settingName, settingValue);
-            }
         }
 
-        public static void SaveModuleSettings(ApplicationDataContainer localSettings, string settingName, List<ModuleSetting> setting)
-        {
-            if (!localSettings.Containers.ContainsKey("AppSettings"))
-            {
-                localSettings = localSettings.CreateContainer("AppSettings", Windows.Storage.ApplicationDataCreateDisposition.Always);
-                Debug.WriteLine("New Container created");
-            }
-            else
-            {
-                Debug.WriteLine("Container already existed");
-            }
-            if (localSettings.Containers.ContainsKey("AppSettings"))
-            {
-                if (localSettings.Containers["AppSettings"].Values.ContainsKey(settingName))
-                    localSettings.Containers["AppSettings"].Values[settingName] = setting;
-                else
-                    localSettings.Containers["AppSettings"].Values.Add(settingName, setting);
-            }
-        }
-
-        public static List<ModuleSetting> LoadModuleSettings(ApplicationDataContainer localSettings, string settingName)
+        public static List<ModuleSetting> LoadModuleSettings(string settingName)
         {
             List<ModuleSetting> lms = new List<ModuleSetting>();
-            if (localSettings.Containers.ContainsKey("AppSettings"))
-            {
-                if (localSettings.Containers["AppSettings"].Values.ContainsKey(settingName))
-                {
-                    string json = (String)(localSettings.Containers["AppSettings"].Values[settingName]);
+           
+                
+                    string json = (ModuleSetting.Load(settingName)).SettingData;
                     Newtonsoft.Json.Linq.JArray objs = (Newtonsoft.Json.Linq.JArray)JsonConvert.DeserializeObject(json);
 
                     foreach (Newtonsoft.Json.Linq.JObject obj in objs)
@@ -76,36 +58,23 @@ namespace UniteEDTeacher.Code
                     }
 
                     return (List<ModuleSetting>)(lms);
-                }
-                else
-                    return null;
-            }
-            else {
-                return null;
-            }
+                
+           
+            
         }
-        public static String LoadJSONSettings(ApplicationDataContainer localSettings, string settingName)
-        {
-            if (localSettings.Containers.ContainsKey("AppSettings"))
-            {
-                if (localSettings.Containers["AppSettings"].Values.ContainsKey(settingName))
-                    return (String)(localSettings.Containers["AppSettings"].Values[settingName]);
-                else
-                    return null;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        private static BitmapSource qrcode { set;get; }
+
+        private static Bitmap qrcode { set; get; }
         private static async void genQRCode(String text)
         {
 
             try
             {
-                BitmapSource x = await TCD.Device.Camera.Barcodes.Encoder.GenerateQRCodeAsync(text, 300);
-                qrcode = x;
+                var writer = new BarcodeWriter();
+                writer.Format = BarcodeFormat.QR_CODE;
+                var result = writer.Write(text);
+                var barcodeBitmap = new Bitmap(result);
+                qrcode = barcodeBitmap;
+
             }
             catch (Exception ex)
             { 
@@ -114,7 +83,8 @@ namespace UniteEDTeacher.Code
 
         
         }
-        public static BitmapSource getQRCode(String text) {
+        public static Bitmap getQRCode(String text)
+        {
 
             genQRCode(text);
             return qrcode;
@@ -122,18 +92,21 @@ namespace UniteEDTeacher.Code
         }
 
         //Dns.getHostAddresses
-        public static HostName getIPAddress()
+        public static String getIPAddress()
         {
 
-            IReadOnlyList<HostName> hosts = NetworkInformation.GetHostNames();
-            foreach (HostName aName in hosts)
+            string _IP = null;
+
+            System.Net.IPHostEntry _IPHostEntry = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
+
+            foreach (System.Net.IPAddress _IPAddress in _IPHostEntry.AddressList)
             {
-                if (aName.Type == HostNameType.Ipv4)
+                if (_IPAddress.AddressFamily.ToString() == "InterNetwork")
                 {
-                    return aName;
+                    _IP = _IPAddress.ToString();
                 }
             }
-            return null;
+            return _IP;
 
         }
     }

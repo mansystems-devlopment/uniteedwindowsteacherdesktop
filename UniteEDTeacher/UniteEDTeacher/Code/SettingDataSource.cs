@@ -5,7 +5,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Storage;
 
 namespace UniteEDTeacher.Code
 {
@@ -16,7 +15,7 @@ namespace UniteEDTeacher.Code
     {
         private ObservableCollection<ActivationModule> _ActivationModules = new ObservableCollection<ActivationModule>();
 
-        private ApplicationDataContainer Settings { get; set; }
+        
         public ObservableCollection<ActivationModule> ActivationModules
         {
             get
@@ -25,38 +24,37 @@ namespace UniteEDTeacher.Code
             }
         }
 
-        public SettingDataSource(ApplicationDataContainer settings)
+        public SettingDataSource()
         {
-            this.Settings = settings;
 
             ActivationModule storeActivationModule = new ActivationModule();
             storeActivationModule.ModuleName = "store";
-            storeActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(this.Settings, storeActivationModule.ModuleName);
+            storeActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(storeActivationModule.ModuleName);
             this.ActivationModules.Add(storeActivationModule);
 
             ActivationModule booksActivationModule = new ActivationModule();
             booksActivationModule.ModuleName = "books";
-            booksActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(this.Settings, booksActivationModule.ModuleName);
+            booksActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(booksActivationModule.ModuleName);
             this.ActivationModules.Add(booksActivationModule);
 
             ActivationModule GoogleAccountActivationModule = new ActivationModule();
             GoogleAccountActivationModule.ModuleName = "GoogleAccount";
-            GoogleAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(this.Settings, GoogleAccountActivationModule.ModuleName);
+            GoogleAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(GoogleAccountActivationModule.ModuleName);
             this.ActivationModules.Add(GoogleAccountActivationModule);
 
             ActivationModule MoodleAccountActivationModule = new ActivationModule();
             MoodleAccountActivationModule.ModuleName = "MoodleAccount";
-            MoodleAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(this.Settings, MoodleAccountActivationModule.ModuleName);
+            MoodleAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(MoodleAccountActivationModule.ModuleName);
             this.ActivationModules.Add(MoodleAccountActivationModule);
 
             ActivationModule CloudbancAccountActivationModule = new ActivationModule();
             CloudbancAccountActivationModule.ModuleName = "CloudbancAccount";
-            CloudbancAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(this.Settings, CloudbancAccountActivationModule.ModuleName);
+            CloudbancAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(CloudbancAccountActivationModule.ModuleName);
             this.ActivationModules.Add(CloudbancAccountActivationModule);
 
             ActivationModule SchoolAccountActivationModule = new ActivationModule();
             SchoolAccountActivationModule.ModuleName = "School";
-            SchoolAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(this.Settings, SchoolAccountActivationModule.ModuleName);
+            SchoolAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(SchoolAccountActivationModule.ModuleName);
             this.ActivationModules.Add(SchoolAccountActivationModule);
 
 
