@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using System.Windows;
 /*using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.UI.Core;
@@ -25,39 +26,30 @@ namespace UniteEDTeacher.Code
 
         }
 
-        private async void GetCallback(IAsyncResult asynchronousResult)
+        private void GetCallback(IAsyncResult asynchronousResult)
         {
             try
             {
                 State state = (State)asynchronousResult.AsyncState;
                 HttpWebResponse httpresponse = (HttpWebResponse)state.WebRequest.EndGetResponse(asynchronousResult);
+                //Dispatch request back to ui thread
 
-               await Dispatcher.CurrentDispatcher.BeginInvoke(
 
-                   new Action(
+                state.ResponseCallBack(httpresponse);
 
-                       () => {
-                           state.ResponseCallBack(httpresponse);
-                       })
-
-                   );
             }
             catch (WebException ex)
             {
 
-
-                //Deployment.Current.Dispatcher.BeginInvoke((Action)(() => MessageBox.Show(ex.Message + "\n" + ex.StackTrace)));
-                //Logger.WriteLine("Get Call Back "+ex.Message + "\nStack trace: " + ex.Message+"\n" + ex.StackTrace);
-
-                Debug.WriteLine(ex.Message + "\n" + ex.StackTrace);
+                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
             }
         }
 
-        public void PostData(Action<HttpWebResponse> responseCallBack, string url, string postData)
+        public void PostData(Action<HttpWebResponse> responseCallBack, string action, string postData)
         {
             try
             {
-                var webRequest = (HttpWebRequest)WebRequest.Create(new Uri("http://41.0.104.2:8081/rest/" + url));
+                var webRequest = (HttpWebRequest)WebRequest.Create(new Uri(Constant.baseURL + action));
 
                 webRequest.Method = "POST";
                 webRequest.ContentType = "application/x-www-form-urlencoded";

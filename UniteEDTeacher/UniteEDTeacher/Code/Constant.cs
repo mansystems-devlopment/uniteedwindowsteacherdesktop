@@ -18,6 +18,6 @@ namespace UniteEDTeacher.Code
         public static string deviceOS = "Windows 8";
         public static string carrier = "(No Network)";
         public static string countryCode = "SA"; 
-        public static string url = "http://41.0.104.2:8081/rest/";
+        public static string baseURL = "http://41.0.104.2:8081/rest/";
     }
 }

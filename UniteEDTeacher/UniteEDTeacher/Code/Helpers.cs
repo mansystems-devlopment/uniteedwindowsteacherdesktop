@@ -62,6 +62,13 @@ namespace UniteEDTeacher.Code
            
             
         }
+        public static String LoadJSONSettings(string settingName)
+        {
+            
+                string json = (ModuleSetting.Load(settingName)).SettingData;
+                return json;
+           
+        }
 
         private static Bitmap qrcode { set; get; }
         private static async void genQRCode(String text)

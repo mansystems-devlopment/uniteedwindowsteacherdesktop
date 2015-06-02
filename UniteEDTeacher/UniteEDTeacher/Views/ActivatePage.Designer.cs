@@ -40,10 +40,10 @@
             // 
             this.txtUserid.AcceptsReturn = true;
             this.txtUserid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUserid.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.txtUserid.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtUserid.HideSelection = false;
-            this.txtUserid.Location = new System.Drawing.Point(135, 149);
-            this.txtUserid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUserid.Location = new System.Drawing.Point(137, 170);
+            this.txtUserid.Margin = new System.Windows.Forms.Padding(2);
             this.txtUserid.Name = "txtUserid";
             this.txtUserid.Size = new System.Drawing.Size(246, 20);
             this.txtUserid.TabIndex = 1;
@@ -54,7 +54,7 @@
             this.btnActivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btnActivate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnActivate.Location = new System.Drawing.Point(177, 240);
-            this.btnActivate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActivate.Margin = new System.Windows.Forms.Padding(2);
             this.btnActivate.Name = "btnActivate";
             this.btnActivate.Size = new System.Drawing.Size(159, 50);
             this.btnActivate.TabIndex = 2;
@@ -67,7 +67,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(523, 108);
             this.pictureBox1.TabIndex = 4;
@@ -76,9 +76,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(132, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(83, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "User ID";
             // 
@@ -92,13 +93,13 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnActivate);
             this.Controls.Add(this.txtUserid);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ActivatePage";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Activate";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ActivatePage_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
