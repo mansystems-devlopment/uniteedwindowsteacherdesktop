@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,8 @@ namespace UniteEDTeacher.Views
     {
         public DashboardForm()
         {
+
+
             InitializeComponent();
         }
 
@@ -70,6 +73,17 @@ namespace UniteEDTeacher.Views
             MediaForm myForm = new MediaForm();
 
             myForm.ShowDialog();
+        }
+
+        private void DashboardForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void changeAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new ActivateForm().Show();
+            this.Hide();
         }
 
        

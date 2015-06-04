@@ -19,42 +19,76 @@ using System.Windows.Media;
 using System.Net.NetworkInformation;
 using UniteEDTeacher.Code;
 using UniteEDTeacher.Serialization;
+using System.Management;
+using System.Globalization;
 
 namespace UniteEDTeacher
 {
-    public partial class ActivatePage : Form
+    public partial class ActivateForm : Form
     {
         SolidColorBrush brushBlack = new SolidColorBrush(Colors.Black);
         SolidColorBrush brushGrey = new SolidColorBrush(Colors.LightGray);
         SolidColorBrush brushRed = new SolidColorBrush(Colors.Red);
 
-        public ActivatePage()
+        public ActivateForm()
         {
             InitializeComponent();
         }
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
+            string deviceManufacturer = "";
+            string deviceModel = "";
+            string deviceSerialNumber = "";
+            var c = new CultureInfo("en-GB");
+            var r = new RegionInfo(c.LCID);
+
+            // create management class object
+            ManagementClass mc = new ManagementClass("Win32_ComputerSystem");
+            //collection to store all management objects
+            ManagementObjectCollection moc = mc.GetInstances();
+            if (moc.Count != 0)
+            {
+                foreach (ManagementObject mo in mc.GetInstances())
+                {
+                    // display general system information
+                    deviceManufacturer = mo["Manufacturer"].ToString();
+                    deviceModel = mo["Model"].ToString();
+                }
+            }
+
+            // create management class object
+            mc = new ManagementClass("Win32_BaseBoard");
+            //collection to store all management objects
+            moc = mc.GetInstances();
+            if (moc.Count != 0)
+            {
+                foreach (ManagementObject mo in mc.GetInstances())
+                {
+                    deviceSerialNumber = mo["SerialNumber"].ToString();
+                }
+            }
+
             if (NetworkInterface.GetIsNetworkAvailable() == true)
             {
                 if (txtUserid.Text != "")
                 {
                     UniteEDNetwork net = new UniteEDNetwork();
 
-                    string postData = "aid=";
-                    postData += Constant.appId + "&uid=";
-                    postData += txtUserid.Text + "&cno=";
-                    postData += "Windows no cell" + "&av=";
-                    postData += Constant.appVersion + "&apn=";
-                    postData += Constant.appPackName + "&dm=";
-                    postData += Constant.deviceModel + "&im=";
-                    postData += Constant.IMEI + "&dmf=";
-                    postData += Constant.deviceManufacturer + "&dos=";
-                    postData += Constant.deviceOS + "&cr=";
-                    postData += Constant.carrier + "&cc=";
-                    postData += Constant.countryCode;
-                    postData += "&dsn=";
-                    postData += Constant.deviceSerialNumber;
+                    string postData = "AppID=";
+                    postData += Constant.appId + "&UserID=";
+                    postData += txtUserid.Text + "&CellNumber=";
+                    postData += "(Windows no cell)" + "&AppVersion=";
+                    postData += Constant.appVersion + "&AppPackName=";
+                    postData += Constant.appPackName + "&DeviceModel=";
+                    postData += deviceModel + "&IMEI=";
+                    postData += Helpers.getUniqueDeviceID() + "&DeviceManufacturer=";
+                    postData += deviceManufacturer + "&DeviceOS=";
+                    postData += Environment.OSVersion.ToString() + "&Carrier=";
+                    postData += "(No ISP)" + "&CountryCode=";
+                    postData += "(No Country Code)";
+                    postData += "&DeviceSerialNumber=";
+                    postData += deviceSerialNumber;
 
                     Form frm = this;
 
@@ -70,9 +104,9 @@ namespace UniteEDTeacher
                                 var re = httpwebStreamReader.ReadToEnd();
                                 //login response
                                 ActivationResponse response = JsonConvert.DeserializeObject<ActivationResponse>(re);
-                                if (response.ResultCode.Equals("0"))
+                                if (response.ResultCode.Equals("0") || response.ResultCode.Equals("200"))
                                 {
-                                    MessageBox.Show(response.ResultMessage, "Activation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Activation Successfull", "Activation", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     Helpers.SaveSettings("UserID", txtUserid.Text);
 
@@ -85,6 +119,8 @@ namespace UniteEDTeacher
                                     this.Invoke(
                                         (Action)(() =>
                                             {
+                                                UniteEDTeacher.Properties.Settings.Default.activated = true;
+                                                UniteEDTeacher.Properties.Settings.Default.Save();
 
                                                 frm.Hide();
                                                 DashboardForm dashboardPage = new DashboardForm();

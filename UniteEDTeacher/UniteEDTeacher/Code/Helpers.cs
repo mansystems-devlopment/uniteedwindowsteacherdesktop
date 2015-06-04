@@ -12,6 +12,9 @@ using ZXing;
 using System.Drawing;
 using System.Drawing.Imaging;
 using Newtonsoft.Json;
+using System.Net.NetworkInformation;
+using System.Management;
+using System.IO;
 //using Windows.Networking;
 //using Windows.Networking.Connectivity;
 //using Windows.Storage;
@@ -114,6 +117,64 @@ namespace UniteEDTeacher.Code
                 }
             }
             return _IP;
+
+        }
+
+        private static String getMACAddress()
+        {
+
+            var macAddr =
+             (
+                 from nic in NetworkInterface.GetAllNetworkInterfaces()
+                 where nic.OperationalStatus == OperationalStatus.Up
+                 select nic.GetPhysicalAddress().ToString()
+             ).FirstOrDefault();
+
+            return macAddr.ToString();
+
+        }
+        private static String getCPUID()
+        {
+            string cpuInfo = string.Empty;
+            ManagementClass mc = new ManagementClass("win32_processor");
+            ManagementObjectCollection moc = mc.GetInstances();
+
+            foreach (ManagementObject mo in moc)
+            {
+                if (cpuInfo == "")
+                {
+                    //Get only the first CPU's ID
+                    cpuInfo = mo.Properties["processorID"].Value.ToString();
+                    break;
+                }
+            }
+            return cpuInfo;
+
+        }
+
+        private static String getHardWareDriveID()
+        {
+
+            String drive = Path.GetPathRoot(Environment.SystemDirectory);
+
+            drive = drive.Trim(new char[] { '\\' });
+            drive = drive.Trim(new char[] { ':' });
+
+
+            ManagementObject dsk = new ManagementObject(@"win32_logicaldisk.deviceid=""" + drive + @":""");
+            dsk.Get();
+            string volumeSerial = dsk["VolumeSerialNumber"].ToString();
+
+            return volumeSerial;
+
+        }
+
+        public static String getUniqueDeviceID()
+        {
+
+            
+                return getMACAddress() + getCPUID() + getHardWareDriveID();
+            
 
         }
     }

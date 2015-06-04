@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniteEDTeacher.Views;
 
 namespace UniteEDTeacher
 {
@@ -16,7 +17,14 @@ namespace UniteEDTeacher
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ActivatePage());
+            if (UniteEDTeacher.Properties.Settings.Default.activated)
+            {
+                Application.Run(new DashboardForm());
+            }
+            else
+            {
+                Application.Run(new ActivateForm());
+            }
 
         }
     }
