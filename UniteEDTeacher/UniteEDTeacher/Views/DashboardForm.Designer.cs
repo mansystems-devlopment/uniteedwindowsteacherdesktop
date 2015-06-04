@@ -37,14 +37,13 @@
             this.btnMedia = new System.Windows.Forms.Button();
             this.btnClassRoom = new System.Windows.Forms.Button();
             this.btnSmartLink = new System.Windows.Forms.Button();
-            this.btnShop = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fIleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -67,11 +66,10 @@
             this.flowLayoutPanel1.Controls.Add(this.btnMedia);
             this.flowLayoutPanel1.Controls.Add(this.btnClassRoom);
             this.flowLayoutPanel1.Controls.Add(this.btnSmartLink);
-            this.flowLayoutPanel1.Controls.Add(this.btnShop);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 6);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1139, 553);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1139, 554);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // btnMyCourses
@@ -177,7 +175,7 @@
             this.btnClassRoom.Name = "btnClassRoom";
             this.btnClassRoom.Size = new System.Drawing.Size(220, 220);
             this.btnClassRoom.TabIndex = 3;
-            this.btnClassRoom.Text = "CLASS ROOM";
+            this.btnClassRoom.Text = "CLASSROOM";
             this.btnClassRoom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnClassRoom.UseVisualStyleBackColor = false;
             this.btnClassRoom.Click += new System.EventHandler(this.btnClassRoom_Click);
@@ -199,25 +197,6 @@
             this.btnSmartLink.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSmartLink.UseVisualStyleBackColor = false;
             this.btnSmartLink.Click += new System.EventHandler(this.btnSmartLink_Click);
-            // 
-            // btnShop
-            // 
-            this.btnShop.BackColor = System.Drawing.Color.Transparent;
-            this.btnShop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShop.BackgroundImage")));
-            this.btnShop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnShop.FlatAppearance.BorderSize = 0;
-            this.btnShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShop.ForeColor = System.Drawing.Color.Gray;
-            this.btnShop.Location = new System.Drawing.Point(814, 292);
-            this.btnShop.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
-            this.btnShop.Name = "btnShop";
-            this.btnShop.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnShop.Size = new System.Drawing.Size(220, 220);
-            this.btnShop.TabIndex = 8;
-            this.btnShop.Text = "SHOP";
-            this.btnShop.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnShop.UseVisualStyleBackColor = false;
-            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
             // 
             // pictureBox1
             // 
@@ -246,7 +225,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(1161, 692);
-            this.splitContainer1.SplitterDistance = 118;
+            this.splitContainer1.SplitterDistance = 117;
             this.splitContainer1.TabIndex = 12;
             // 
             // menuStrip1
@@ -269,12 +248,6 @@
             this.fIleToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fIleToolStripMenuItem.Text = "FIle";
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
             // changeAccountToolStripMenuItem
             // 
             this.changeAccountToolStripMenuItem.Name = "changeAccountToolStripMenuItem";
@@ -287,6 +260,12 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(160, 6);
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,6 +273,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1161, 692);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DashboardForm";
@@ -323,7 +303,6 @@
         private System.Windows.Forms.Button btnCloudbanc;
         private System.Windows.Forms.Button btnMedia;
         private System.Windows.Forms.Button btnBookStore;
-        private System.Windows.Forms.Button btnShop;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;

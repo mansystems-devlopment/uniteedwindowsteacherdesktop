@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MediaForm));
             this.MediawebBrowser = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
@@ -35,19 +36,24 @@
             // 
             this.MediawebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MediawebBrowser.Location = new System.Drawing.Point(0, 0);
-            this.MediawebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.MediawebBrowser.Margin = new System.Windows.Forms.Padding(2);
+            this.MediawebBrowser.MinimumSize = new System.Drawing.Size(15, 16);
             this.MediawebBrowser.Name = "MediawebBrowser";
-            this.MediawebBrowser.Size = new System.Drawing.Size(1484, 740);
+            this.MediawebBrowser.ScriptErrorsSuppressed = true;
+            this.MediawebBrowser.Size = new System.Drawing.Size(1113, 601);
             this.MediawebBrowser.TabIndex = 0;
             // 
-            // MediaPage
+            // MediaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 740);
+            this.ClientSize = new System.Drawing.Size(1113, 601);
             this.Controls.Add(this.MediawebBrowser);
-            this.Name = "MediaPage";
-            this.ShowIcon = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+            this.Name = "MediaForm";
             this.ShowInTaskbar = false;
             this.Text = "Media";
             this.ResumeLayout(false);

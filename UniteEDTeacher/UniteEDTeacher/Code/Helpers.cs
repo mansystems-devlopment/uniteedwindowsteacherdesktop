@@ -15,6 +15,9 @@ using Newtonsoft.Json;
 using System.Net.NetworkInformation;
 using System.Management;
 using System.IO;
+using System.Windows;
+using System.Windows.Forms;
+using Microsoft.Win32;
 //using Windows.Networking;
 //using Windows.Networking.Connectivity;
 //using Windows.Storage;
@@ -46,21 +49,28 @@ namespace UniteEDTeacher.Code
 
         public static List<ModuleSetting> LoadModuleSettings(string settingName)
         {
-            List<ModuleSetting> lms = new List<ModuleSetting>();
-           
+            try
+            {
+                List<ModuleSetting> lms = new List<ModuleSetting>();
+
+
+                string json = (ModuleSetting.Load(settingName)).SettingData;
+                Newtonsoft.Json.Linq.JArray objs = (Newtonsoft.Json.Linq.JArray)JsonConvert.DeserializeObject(json);
+
+                foreach (Newtonsoft.Json.Linq.JObject obj in objs)
+                {
+                    ModuleSetting ms = new ModuleSetting();
+                    ms.SettingName = obj["SettingName"].ToString();
+                    ms.SettingData = obj["SettingData"].ToString();
+                    lms.Add(ms);
+                }
+
+                return (List<ModuleSetting>)(lms);
+            }
+            catch (Exception ex) {
                 
-                    string json = (ModuleSetting.Load(settingName)).SettingData;
-                    Newtonsoft.Json.Linq.JArray objs = (Newtonsoft.Json.Linq.JArray)JsonConvert.DeserializeObject(json);
-
-                    foreach (Newtonsoft.Json.Linq.JObject obj in objs)
-                    {
-                        ModuleSetting ms = new ModuleSetting();
-                        ms.SettingName = obj["SettingName"].ToString();
-                        ms.SettingData = obj["SettingData"].ToString();
-                        lms.Add(ms);
-                    }
-
-                    return (List<ModuleSetting>)(lms);
+                return null;
+            }
                 
            
             
@@ -176,6 +186,42 @@ namespace UniteEDTeacher.Code
                 return getMACAddress() + getCPUID() + getHardWareDriveID();
             
 
+        }
+
+        public static bool checkInstalled(string c_name)
+        {
+            string displayName;
+
+            string registryKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
+            RegistryKey key = Registry.LocalMachine.OpenSubKey(registryKey);
+            if (key != null)
+            {
+                foreach (RegistryKey subkey in key.GetSubKeyNames().Select(keyName => key.OpenSubKey(keyName)))
+                {
+                    displayName = subkey.GetValue("DisplayName") as string;
+                    if (displayName != null && displayName.Contains(c_name))
+                    {
+                        return true;
+                    }
+                }
+                key.Close();
+            }
+
+            registryKey = @"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall";
+            key = Registry.LocalMachine.OpenSubKey(registryKey);
+            if (key != null)
+            {
+                foreach (RegistryKey subkey in key.GetSubKeyNames().Select(keyName => key.OpenSubKey(keyName)))
+                {
+                    displayName = subkey.GetValue("DisplayName") as string;
+                    if (displayName != null && displayName.Contains(c_name))
+                    {
+                        return true;
+                    }
+                }
+                key.Close();
+            }
+            return false;
         }
     }
 }
