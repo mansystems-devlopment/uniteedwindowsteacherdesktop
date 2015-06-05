@@ -38,6 +38,7 @@ namespace UniteEDTeacher.Views
             {
 
                 UniteEDNetwork net = new UniteEDNetwork();
+                
                 SmartLinkwebBrowser.Navigate(new Uri(smartLinkUrl));
 
             }

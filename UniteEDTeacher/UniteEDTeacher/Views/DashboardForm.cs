@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CefSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -137,6 +138,8 @@ namespace UniteEDTeacher.Views
 
         private void DashboardForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+
+            Cef.Shutdown();
             Application.Exit();
         }
 
@@ -144,6 +147,16 @@ namespace UniteEDTeacher.Views
         {
             new ActivateForm().Show();
             this.Hide();
+        }
+
+        private void teacherOnlineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new TeacherOnlineForm().Show();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
        
