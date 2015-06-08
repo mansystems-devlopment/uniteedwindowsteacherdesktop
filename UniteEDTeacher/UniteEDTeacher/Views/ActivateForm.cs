@@ -106,7 +106,7 @@ namespace UniteEDTeacher
                                 ActivationResponse response = JsonConvert.DeserializeObject<ActivationResponse>(re);
                                 if (response.ResultCode.Equals("0") || response.ResultCode.Equals("200"))
                                 {
-                                    MessageBox.Show("Activation Successfull", "Activation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    
 
                                     Helpers.SaveSettings("UserID", txtUserid.Text);
 
@@ -132,7 +132,7 @@ namespace UniteEDTeacher
 
                                         ));
 
-
+                                    MessageBox.Show("Activation Successfull", "Activation", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 }
                                 else

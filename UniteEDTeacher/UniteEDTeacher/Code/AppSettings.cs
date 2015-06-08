@@ -21,7 +21,7 @@ namespace UniteEDTeacher.Code
         {
             createFolder();
 
-            string path = specificFolder + DEFAULT_FILENAME + ".modulesetting";
+            string path = @specificFolder + DEFAULT_FILENAME + ".modulesetting";
 
             File.WriteAllText(path, JsonConvert.SerializeObject(this));
         }
@@ -29,25 +29,25 @@ namespace UniteEDTeacher.Code
         public static void Save(T pSettings, string fileName)
         {
             createFolder();
-            string path = specificFolder + fileName + ".modulesetting";
+            string path = @specificFolder + fileName + ".modulesetting";
             File.WriteAllText(path,  JsonConvert.SerializeObject(pSettings));
         }
 
         public static T Load(string fileName)
         {
             T t = new T();
-            string path = specificFolder + fileName + ".modulesetting";
+            string path = @specificFolder + fileName + ".modulesetting";
 
             if (File.Exists(path))
-                t = JsonConvert.DeserializeObject<T>(File.ReadAllText(fileName + ".modulesetting"));
+                t = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
             return t;
         }
         public static void createFolder(){
        
 
         // Check if folder exists and if not, create it
-        if(!Directory.Exists(specificFolder)) 
-            Directory.CreateDirectory(specificFolder);
+        if(!Directory.Exists(@specificFolder)) 
+            Directory.CreateDirectory(@specificFolder);
         }
     }
 }
