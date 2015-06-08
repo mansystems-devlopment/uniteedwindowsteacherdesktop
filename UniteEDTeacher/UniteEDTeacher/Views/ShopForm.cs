@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace UniteEDTeacher.Views
 {
-    public partial class ShopForm : BaseForm
+    public partial class ShopForm : Form
     {
         public ShopForm()
         {

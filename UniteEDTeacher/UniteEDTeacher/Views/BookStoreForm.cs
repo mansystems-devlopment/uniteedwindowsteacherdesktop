@@ -60,7 +60,7 @@ namespace UniteEDTeacher.Views
                     {
                         Dock = DockStyle.Fill,
                     };
-                    panel1.Controls.Add(browser);
+                    panel2.Controls.Add(browser);
                     browser.StatusMessage += OnBrowserStatusMessage;
                     browser.FrameLoadEnd += OnBrowserFrameLoadEnd;
 
@@ -119,7 +119,7 @@ namespace UniteEDTeacher.Views
                 Action action = new Action(() => {
 
                     DisplayOutput(string.Format("URL: {0}, Status Code: {1}", args.Url, args.HttpStatusCode));
-                    pictureBox1.Visible = false;
+                    pictureBox2.Visible = false;
                 
                 });
 
@@ -138,6 +138,11 @@ namespace UniteEDTeacher.Views
         private void BookStoreForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             browser.Dispose();            
+        }
+
+        private void BookStoreForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

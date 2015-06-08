@@ -5,6 +5,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Windows;
+using System.Windows.Forms;
 
 namespace UniteEDTeacher.Code
 {
@@ -26,38 +29,25 @@ namespace UniteEDTeacher.Code
 
         public SettingDataSource()
         {
+            try
+            {
 
-            ActivationModule storeActivationModule = new ActivationModule();
-            storeActivationModule.ModuleName = "store";
-            storeActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(storeActivationModule.ModuleName);
-            this.ActivationModules.Add(storeActivationModule);
+                string json = (ModuleSetting.Load("AllModuleSetting")).SettingData;
+                Newtonsoft.Json.Linq.JArray objs = (Newtonsoft.Json.Linq.JArray)JsonConvert.DeserializeObject(json);
 
-            ActivationModule booksActivationModule = new ActivationModule();
-            booksActivationModule.ModuleName = "books";
-            booksActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(booksActivationModule.ModuleName);
-            this.ActivationModules.Add(booksActivationModule);
+                foreach (Newtonsoft.Json.Linq.JObject obj in objs)
+                {
 
-            ActivationModule GoogleAccountActivationModule = new ActivationModule();
-            GoogleAccountActivationModule.ModuleName = "GoogleAccount";
-            GoogleAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(GoogleAccountActivationModule.ModuleName);
-            this.ActivationModules.Add(GoogleAccountActivationModule);
+                    ActivationModule SchoolAccountActivationModule = new ActivationModule();
+                    SchoolAccountActivationModule.ModuleName = obj["ModuleName"].ToString();
+                    SchoolAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(SchoolAccountActivationModule.ModuleName);
+                    this.ActivationModules.Add(SchoolAccountActivationModule);
+                }
 
-            ActivationModule MoodleAccountActivationModule = new ActivationModule();
-            MoodleAccountActivationModule.ModuleName = "MoodleAccount";
-            MoodleAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(MoodleAccountActivationModule.ModuleName);
-            this.ActivationModules.Add(MoodleAccountActivationModule);
-
-            ActivationModule CloudbancAccountActivationModule = new ActivationModule();
-            CloudbancAccountActivationModule.ModuleName = "CloudbancAccount";
-            CloudbancAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(CloudbancAccountActivationModule.ModuleName);
-            this.ActivationModules.Add(CloudbancAccountActivationModule);
-
-            ActivationModule SchoolAccountActivationModule = new ActivationModule();
-            SchoolAccountActivationModule.ModuleName = "School";
-            SchoolAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(SchoolAccountActivationModule.ModuleName);
-            this.ActivationModules.Add(SchoolAccountActivationModule);
-
-
+            }
+            catch (Exception ex) {
+                
+            }
         }
 
         // Returns the feed that has the specified title.

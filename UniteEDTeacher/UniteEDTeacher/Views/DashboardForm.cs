@@ -156,7 +156,7 @@ namespace UniteEDTeacher.Views
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new SettingsForm().Show();
         }
 
        

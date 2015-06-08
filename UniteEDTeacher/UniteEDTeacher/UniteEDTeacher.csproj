@@ -134,6 +134,12 @@
     <Compile Include="Views\BookStoreForm.Designer.cs">
       <DependentUpon>BookStoreForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ClassRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClassRoomForm.Designer.cs">
+      <DependentUpon>ClassRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CloudbancForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,17 +164,17 @@
     <Compile Include="Views\MyCourseForm.Designer.cs">
       <DependentUpon>MyCourseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ShopForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\ShopForm.Designer.cs">
       <DependentUpon>ShopForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ClassRoomForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ClassRoomForm.Designer.cs">
-      <DependentUpon>ClassRoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SmartLinkForm.cs">
       <SubType>Form</SubType>
@@ -176,11 +182,11 @@
     <Compile Include="Views\SmartLinkForm.Designer.cs">
       <DependentUpon>SmartLinkForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\TeacherOnline.cs">
+    <Compile Include="Views\TeacherOnlineForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\TeacherOnline.Designer.cs">
-      <DependentUpon>TeacherOnline.cs</DependentUpon>
+    <Compile Include="Views\TeacherOnlineForm.Designer.cs">
+      <DependentUpon>TeacherOnlineForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Views\ActivateForm.resx">
       <DependentUpon>ActivateForm.cs</DependentUpon>
@@ -201,6 +207,9 @@
     <EmbeddedResource Include="Views\BookStoreForm.resx">
       <DependentUpon>BookStoreForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ClassRoomForm.resx">
+      <DependentUpon>ClassRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CloudbancForm.resx">
       <DependentUpon>CloudbancForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,17 +222,17 @@
     <EmbeddedResource Include="Views\MyCourseForm.resx">
       <DependentUpon>MyCourseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ShopForm.resx">
       <DependentUpon>ShopForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ClassRoomForm.resx">
-      <DependentUpon>ClassRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SmartLinkForm.resx">
       <DependentUpon>SmartLinkForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\TeacherOnline.resx">
-      <DependentUpon>TeacherOnline.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TeacherOnlineForm.resx">
+      <DependentUpon>TeacherOnlineForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config">
       <SubType>Designer</SubType>

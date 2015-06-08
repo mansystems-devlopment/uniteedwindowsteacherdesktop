@@ -110,6 +110,9 @@ namespace UniteEDTeacher
 
                                     Helpers.SaveSettings("UserID", txtUserid.Text);
 
+                                    Helpers.SaveSettings("AllModuleSetting", JsonConvert.SerializeObject(response.OutActivateUser_ModuleList));
+
+
                                     foreach (ActivationModule module in response.OutActivateUser_ModuleList)
                                     {
                                         Helpers.SaveSettings(module.ModuleName, JsonConvert.SerializeObject(module.ModuleList_Setting));

@@ -13,22 +13,41 @@ namespace UniteEDTeacher.Code
     {
         public string DEFAULT_FILENAME = "settings";
 
+        // Combine the base folder with your specific folder....
+        public static string specificFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Mansystems South Africa\\UniteED\\");
+
+
         public void Save()
         {
-            File.WriteAllText(DEFAULT_FILENAME, JsonConvert.SerializeObject(this));
+            createFolder();
+
+            string path = specificFolder + DEFAULT_FILENAME + ".modulesetting";
+
+            File.WriteAllText(path, JsonConvert.SerializeObject(this));
         }
 
         public static void Save(T pSettings, string fileName)
         {
-            File.WriteAllText(fileName,  JsonConvert.SerializeObject(pSettings));
+            createFolder();
+            string path = specificFolder + fileName + ".modulesetting";
+            File.WriteAllText(path,  JsonConvert.SerializeObject(pSettings));
         }
 
         public static T Load(string fileName)
         {
             T t = new T();
-            if (File.Exists(fileName))
-                t = JsonConvert.DeserializeObject<T>(File.ReadAllText(fileName));
+            string path = specificFolder + fileName + ".modulesetting";
+
+            if (File.Exists(path))
+                t = JsonConvert.DeserializeObject<T>(File.ReadAllText(fileName + ".modulesetting"));
             return t;
+        }
+        public static void createFolder(){
+       
+
+        // Check if folder exists and if not, create it
+        if(!Directory.Exists(specificFolder)) 
+            Directory.CreateDirectory(specificFolder);
         }
     }
 }

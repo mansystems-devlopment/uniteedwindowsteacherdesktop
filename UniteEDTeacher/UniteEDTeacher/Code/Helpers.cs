@@ -75,6 +75,36 @@ namespace UniteEDTeacher.Code
            
             
         }
+
+        public static List<ModuleSetting> LoadAllModuleSettings()
+        {
+            try
+            {
+                List<ModuleSetting> lms = new List<ModuleSetting>();
+
+
+                string json = (ModuleSetting.Load("AllModuleSetting")).SettingData;
+                Newtonsoft.Json.Linq.JArray objs = (Newtonsoft.Json.Linq.JArray)JsonConvert.DeserializeObject(json);
+
+                foreach (Newtonsoft.Json.Linq.JObject obj in objs)
+                {
+                    ModuleSetting ms = new ModuleSetting();
+                    ms.SettingName = obj["SettingName"].ToString();
+                    ms.SettingData = obj["SettingData"].ToString();
+                    lms.Add(ms);
+                }
+
+                return (List<ModuleSetting>)(lms);
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+
+
+
+        }
         public static String LoadJSONSettings(string settingName)
         {
             

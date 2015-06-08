@@ -15,7 +15,7 @@ using UniteEDTeacher.Serialization;
 namespace UniteEDTeacher.Views
 {
 
-    public partial class MyCourses : BaseForm
+    public partial class MyCourses : Form
     {
       
         public MyCourses(String url)

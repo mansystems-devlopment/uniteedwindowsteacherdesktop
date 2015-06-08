@@ -13,7 +13,7 @@ using UniteEDTeacher.Serialization;
 
 namespace UniteEDTeacher.Views
 {
-    public partial class ClassRoomForm : BaseForm
+    public partial class ClassRoomForm : Form
     {
         public ClassRoomForm()
         {
