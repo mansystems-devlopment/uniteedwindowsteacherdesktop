@@ -114,6 +114,12 @@
     <Compile Include="Serialization\TeacherInfo.cs" />
     <Compile Include="Serialization\UrlActivation.cs" />
     <Compile Include="Serialization\URSResponse.cs" />
+    <Compile Include="Views\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ActivateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     <Compile Include="Views\TeacherOnlineForm.Designer.cs">
       <DependentUpon>TeacherOnlineForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ActivateForm.resx">
       <DependentUpon>ActivateForm.cs</DependentUpon>
     </EmbeddedResource>
