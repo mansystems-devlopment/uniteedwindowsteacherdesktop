@@ -87,6 +87,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2DA47B131F4BF2341B45ED1D329CF394"
+        "OwnerKey" = "8:_C44518FDBB7547E0A8711EB4151D0751"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2E0AFEF22F4E406590730DB0313BFE3D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -382,6 +388,18 @@
         "Entry"
         {
         "MsmKey" = "8:_B8EE2CFE46EBC9160916B27B787D45D6"
+        "OwnerKey" = "8:_2DA47B131F4BF2341B45ED1D329CF394"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B8EE2CFE46EBC9160916B27B787D45D6"
+        "OwnerKey" = "8:_C44518FDBB7547E0A8711EB4151D0751"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B8EE2CFE46EBC9160916B27B787D45D6"
         "OwnerKey" = "8:_9D46AEA6B1CA4880AAC41469970BD47B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -424,6 +442,12 @@
         "Entry"
         {
         "MsmKey" = "8:_C3E9375EFE6B482B9EBEF53C4BDB632F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C44518FDBB7547E0A8711EB4151D0751"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -527,6 +551,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7C7E3B71C03C9BF20ACEFDF81DE81FAF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2DA47B131F4BF2341B45ED1D329CF394"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C44518FDBB7547E0A8711EB4151D0751"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -904,6 +940,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2DA47B131F4BF2341B45ED1D329CF394"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:CefSharp.BrowserSubprocess.Core, Version=39.0.1.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_2DA47B131F4BF2341B45ED1D329CF394"
+                    {
+                    "Name" = "8:CefSharp.BrowserSubprocess.Core.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:CefSharp.BrowserSubprocess.Core.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_A8F16AAB65DE413F84FF407BCCD7192D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E0AFEF22F4E406590730DB0313BFE3D"
@@ -2012,6 +2079,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C44518FDBB7547E0A8711EB4151D0751"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:CefSharp.BrowserSubprocess, Version=39.0.1.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_C44518FDBB7547E0A8711EB4151D0751"
+                    {
+                    "Name" = "8:CefSharp.BrowserSubprocess.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\UniteEDTeacher\\bin\\x86\\Release\\CefSharp.BrowserSubprocess.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_A8F16AAB65DE413F84FF407BCCD7192D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C542A118A6C3466E82CBD96E5D4F8C40"
             {
             "SourcePath" = "8:..\\UniteEDTeacher\\bin\\x86\\Release\\libEGL.dll"
@@ -2391,7 +2489,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:UniteED"
         "ProductCode" = "8:{F03A163A-F43B-45C0-B628-712E20FD6440}"
-        "PackageCode" = "8:{F395ED31-6DB7-4B3D-8491-B7A39CD66849}"
+        "PackageCode" = "8:{A88E2208-694A-44DD-95C7-EB563BA1EA65}"
         "UpgradeCode" = "8:{826D1B4F-F099-4E0A-952E-4156520B6D0D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
