@@ -262,6 +262,7 @@
     <None Include="Resources\menu_icon.png" />
     <None Include="Resources\prog1.gif" />
     <None Include="Resources\login_logo.png" />
+    <Content Include="logo.ico" />
     <Content Include="UniteEDIcon.ico" />
   </ItemGroup>
   <ItemGroup>
