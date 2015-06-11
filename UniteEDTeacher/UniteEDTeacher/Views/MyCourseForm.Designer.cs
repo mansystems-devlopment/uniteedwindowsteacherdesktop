@@ -52,6 +52,7 @@
             this.Name = "MyCourses";
             this.ShowInTaskbar = false;
             this.Text = "My Courses";
+            this.Load += new System.EventHandler(this.MyCourses_Load);
             this.ResumeLayout(false);
 
         }

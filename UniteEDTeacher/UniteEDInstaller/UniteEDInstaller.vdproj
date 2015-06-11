@@ -129,12 +129,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_461E48AAC80547B2B112C60C31D89981"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_49BB33904E644950A27BEE936993DAE6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -202,6 +196,12 @@
         "Entry"
         {
         "MsmKey" = "8:_60C9DC65F7DE48CBAEF6CF831FA089DD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_679FEE794F1F404E9EAE34EFACF1BC86"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1046,26 +1046,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_461E48AAC80547B2B112C60C31D89981"
-            {
-            "SourcePath" = "8:..\\UniteEDTeacher\\UniteEDIcon.ico"
-            "TargetName" = "8:UniteEDIcon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_A8F16AAB65DE413F84FF407BCCD7192D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_49BB33904E644950A27BEE936993DAE6"
             {
             "SourcePath" = "8:..\\UniteEDTeacher\\bin\\x86\\Release\\locales\\fr.pak"
@@ -1303,6 +1283,26 @@
             "TargetName" = "8:bg.pak"
             "Tag" = "8:"
             "Folder" = "8:_6E118312576B4743B22CD347ADBF2867"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_679FEE794F1F404E9EAE34EFACF1BC86"
+            {
+            "SourcePath" = "8:..\\UniteEDTeacher\\UniteEDIcon.ico"
+            "TargetName" = "8:UniteEDIcon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_A8F16AAB65DE413F84FF407BCCD7192D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2391,7 +2391,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:UniteED"
         "ProductCode" = "8:{F03A163A-F43B-45C0-B628-712E20FD6440}"
-        "PackageCode" = "8:{A1E0E28B-4D03-4946-884D-47673E98EF4B}"
+        "PackageCode" = "8:{F395ED31-6DB7-4B3D-8491-B7A39CD66849}"
         "UpgradeCode" = "8:{826D1B4F-F099-4E0A-952E-4156520B6D0D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -2522,7 +2522,7 @@
             "Target" = "8:_9C8BD95F68A44AC6AED6DE5969019ADE"
             "Folder" = "8:_41DCCB80F05142A78D576F339B8F4B0A"
             "WorkingFolder" = "8:_A8F16AAB65DE413F84FF407BCCD7192D"
-            "Icon" = "8:_461E48AAC80547B2B112C60C31D89981"
+            "Icon" = "8:_679FEE794F1F404E9EAE34EFACF1BC86"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_FE74852F5DF845498B471AF5E8F38F54"
@@ -2536,7 +2536,7 @@
             "Target" = "8:_9C8BD95F68A44AC6AED6DE5969019ADE"
             "Folder" = "8:_E678F130D25743EAB0281CBB52887C99"
             "WorkingFolder" = "8:_A8F16AAB65DE413F84FF407BCCD7192D"
-            "Icon" = "8:_461E48AAC80547B2B112C60C31D89981"
+            "Icon" = "8:_679FEE794F1F404E9EAE34EFACF1BC86"
             "Feature" = "8:"
             }
         }

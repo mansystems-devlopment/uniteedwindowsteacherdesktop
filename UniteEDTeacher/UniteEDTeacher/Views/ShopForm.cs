@@ -16,5 +16,10 @@ namespace UniteEDTeacher.Views
         {
             InitializeComponent();
         }
+
+        private void ShopForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

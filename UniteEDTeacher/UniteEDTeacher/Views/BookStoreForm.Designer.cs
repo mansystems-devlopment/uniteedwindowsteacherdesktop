@@ -80,7 +80,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BookStoreForm";
             this.Text = "Book Store";
-            this.Load += new System.EventHandler(this.BookStoreForm_Load_1);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BookStoreForm_FormClosing);
+            this.Load += new System.EventHandler(this.BookStoreForm_Load);
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);

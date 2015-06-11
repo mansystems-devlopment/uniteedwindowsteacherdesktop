@@ -122,12 +122,7 @@ namespace UniteEDTeacher.Views
             Cloudbanc.Show();
         }
 
-        private void btnShop_Click(object sender, EventArgs e)
-        {
-            ShopForm myForm = new ShopForm();
-
-            myForm.Show();
-        }
+        
 
         private void btnMedia_Click(object sender, EventArgs e)
         {

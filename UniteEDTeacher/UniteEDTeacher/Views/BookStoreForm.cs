@@ -61,7 +61,6 @@ namespace UniteEDTeacher.Views
                         Dock = DockStyle.Fill,
                     };
                     panel2.Controls.Add(browser);
-                    browser.StatusMessage += OnBrowserStatusMessage;
                     browser.FrameLoadEnd += OnBrowserFrameLoadEnd;
 
 
@@ -77,38 +76,22 @@ namespace UniteEDTeacher.Views
             }
         }
         
-
-        private void OnBrowserStatusMessage(object sender, StatusMessageEventArgs args)
-        {
-            Action action = new Action(()=> statusLabel.Text = args.Value);
-
-            if (this.InvokeRequired)
-            {
-                this.BeginInvoke(action);
-            }
-            else
-            {
-                action.Invoke();
-            }
-
-            
-        }
-        private void OnBrowserConsoleMessage(object sender, ConsoleMessageEventArgs args)
-        {
-            DisplayOutput(string.Format("Line: {0}, Source: {1}, Message: {2}", args.Line, args.Source, args.Message));
-        }
         public void DisplayOutput(string output)
         {
-            Action action = new Action(() => outputLabel.Text = output);
+            try
+            {
+                Action action = new Action(() => outputLabel.Text = output);
 
-            if (this.InvokeRequired)
-            {
-                this.BeginInvoke(action);
+                if (this.InvokeRequired)
+                {
+                    this.BeginInvoke(action);
+                }
+                else
+                {
+                    action.Invoke();
+                }
             }
-            else
-            {
-                action.Invoke();
-            }
+            catch { }
         }
 
         private void OnBrowserFrameLoadEnd(object sender, FrameLoadEndEventArgs args)
@@ -137,12 +120,14 @@ namespace UniteEDTeacher.Views
         }
         private void BookStoreForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            browser.Dispose();            
-        }
+            try
+            {
+                browser.Dispose();
+            }
+            catch (Exception ex)
+            {
 
-        private void BookStoreForm_Load_1(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }

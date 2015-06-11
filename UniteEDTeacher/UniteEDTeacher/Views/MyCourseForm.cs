@@ -22,6 +22,13 @@ namespace UniteEDTeacher.Views
         {
             InitializeComponent();
 
+           
+            
+            
+        }
+
+        private void MyCourses_Load(object sender, EventArgs e)
+        {
             ActivationModule MoodleAccountActivationModule = new ActivationModule();
             MoodleAccountActivationModule.ModuleName = "moodle";
             MoodleAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(MoodleAccountActivationModule.ModuleName);
@@ -59,7 +66,7 @@ namespace UniteEDTeacher.Views
                 string postData = "username=";
                 postData += moodleUsername + "&password=";
                 postData += moodlePassword + "&wantsurl=";
-                postData += moodleCoursesUrl;
+                postData += moodleLoginUrl;
 
                 net.PostMoodleData((httpResponse) =>
                 {
@@ -78,12 +85,12 @@ namespace UniteEDTeacher.Views
                                         (Action)(() =>
                                         {
                                             MyCoursewebBrowser.Navigate(new Uri(moodleLoginUrl));
-                                           
+
                                         }
 
                                         ));
 
-                           
+
 
 
                             //Check for result code..
@@ -92,7 +99,7 @@ namespace UniteEDTeacher.Views
                     catch (Exception ex)
                     {
 
-                       MessageBox.Show("Opening My Courses",ex.Message + "\n" + ex.StackTrace,MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Opening My Courses", ex.Message + "\n" + ex.StackTrace, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }, moodleLoginUrl + "?about", postData);
             }
@@ -100,8 +107,6 @@ namespace UniteEDTeacher.Views
             {
                 MessageBox.Show("Could not connect to internet", "Network connection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
-            
         }
     }
 }
