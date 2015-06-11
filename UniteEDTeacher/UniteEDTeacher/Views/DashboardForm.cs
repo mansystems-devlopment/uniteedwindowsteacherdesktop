@@ -105,7 +105,49 @@ namespace UniteEDTeacher.Views
 
         private void btnClassRoom_Click(object sender, EventArgs e)
         {
-            new ClassRoomForm().Show();
+            ActivationModule classRoomModule = new ActivationModule();
+            classRoomModule.ModuleName = "ClassRoom";
+            classRoomModule.ModuleList_Setting = Helpers.LoadModuleSettings(classRoomModule.ModuleName);
+
+            String ClassRoomName = "";
+
+            foreach (ModuleSetting moduleSetting in classRoomModule.ModuleList_Setting)
+            {
+
+                if (moduleSetting.SettingName.Equals("Name"))
+                {
+                    ClassRoomName = moduleSetting.SettingData;
+                }
+            }            
+
+            if (Helpers.checkInstalled(ClassRoomName))
+            {
+
+                try
+                {
+                    System.Diagnostics.Process.Start(@"C:\Program Files\Mythware\Classroom Management by Mythware\" + ClassRoomName);
+                }
+                catch
+                {
+
+                    try
+                    {
+                        System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Mythware\Classroom Management by Mythware\" + ClassRoomName);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("There was an Error Opening the application", "Open ClassRoom", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+
+                MessageBox.Show(ClassRoomName + " was not found on your PC. Click Ok to Download. Once you have installed " + ClassRoomName + ", Click on ClassRoom again", "Open " + ClassRoomName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                new ClassRoomForm().Show();
+            }
+            
         }
 
         private void btnSmartLink_Click(object sender, EventArgs e)
@@ -157,6 +199,11 @@ namespace UniteEDTeacher.Views
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AboutBox1().Show();
+        }
+
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+
         }
 
        
