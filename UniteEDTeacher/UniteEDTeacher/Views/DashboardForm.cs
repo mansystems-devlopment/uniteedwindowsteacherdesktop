@@ -110,6 +110,7 @@ namespace UniteEDTeacher.Views
             classRoomModule.ModuleList_Setting = Helpers.LoadModuleSettings(classRoomModule.ModuleName);
 
             String ClassRoomName = "";
+            String ExeName = "";
 
             foreach (ModuleSetting moduleSetting in classRoomModule.ModuleList_Setting)
             {
@@ -118,6 +119,10 @@ namespace UniteEDTeacher.Views
                 {
                     ClassRoomName = moduleSetting.SettingData;
                 }
+                if (moduleSetting.SettingName.Equals("ExeName"))
+                {
+                    ExeName = moduleSetting.SettingData;
+                }
             }            
 
             if (Helpers.checkInstalled(ClassRoomName))
@@ -125,14 +130,14 @@ namespace UniteEDTeacher.Views
 
                 try
                 {
-                    System.Diagnostics.Process.Start(@"C:\Program Files\Mythware\Classroom Management by Mythware\" + ClassRoomName);
+                    System.Diagnostics.Process.Start(@"C:\Program Files\Mythware\Classroom Management by Mythware\" + ExeName);
                 }
                 catch
                 {
 
                     try
                     {
-                        System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Mythware\Classroom Management by Mythware\" + ClassRoomName);
+                        System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Mythware\Classroom Management by Mythware\" + ExeName);
                     }
                     catch
                     {
