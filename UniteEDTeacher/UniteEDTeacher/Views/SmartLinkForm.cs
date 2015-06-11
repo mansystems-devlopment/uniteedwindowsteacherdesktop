@@ -23,67 +23,6 @@ namespace UniteEDTeacher.Views
             InitializeComponent();
 
 
-            ActivationModule smartLinkModule = new ActivationModule();
-            smartLinkModule.ModuleName = "Smartlink";
-            smartLinkModule.ModuleList_Setting = Helpers.LoadModuleSettings(smartLinkModule.ModuleName);
-
-            String smartLinkUrl = "";
-
-            foreach (ModuleSetting moduleSetting in smartLinkModule.ModuleList_Setting)
-            {
-
-                if (moduleSetting.SettingName.Equals("SmartLinkUrl"))
-                {
-                    smartLinkUrl = moduleSetting.SettingData;
-                }
-            }
-            if (NetworkInterface.GetIsNetworkAvailable() == true)
-            {
-                try
-                {
-                    UniteEDNetwork net = new UniteEDNetwork();
-
-                    //WindowState = FormWindowState.Maximized;
-
-                    browser = new ChromiumWebBrowser(smartLinkUrl)
-                    {
-                        Dock = DockStyle.Fill,
-                    };
-                    panel1.Controls.Add(browser);
-                    browser.StatusMessage += OnBrowserStatusMessage;
-                    browser.FrameLoadEnd += OnBrowserFrameLoadEnd;
-
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Could not connect to internet", "Network connection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-        }
-        private void OnBrowserStatusMessage(object sender, StatusMessageEventArgs args)
-        {
-            Action action = new Action(() => statusLabel.Text = args.Value);
-
-            if (this.InvokeRequired)
-            {
-                this.BeginInvoke(action);
-            }
-            else
-            {
-                action.Invoke();
-            }
-
-
-        }
-        private void OnBrowserConsoleMessage(object sender, ConsoleMessageEventArgs args)
-        {
-            DisplayOutput(string.Format("Line: {0}, Source: {1}, Message: {2}", args.Line, args.Source, args.Message));
         }
         public void DisplayOutput(string output)
         {
@@ -127,7 +66,60 @@ namespace UniteEDTeacher.Views
 
         private void SmartLinkForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            browser.Dispose();
+            try
+            {
+                browser.Dispose();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void SmartLinkForm_Load(object sender, EventArgs e)
+        {
+
+
+            ActivationModule smartLinkModule = new ActivationModule();
+            smartLinkModule.ModuleName = "Smartlink";
+            smartLinkModule.ModuleList_Setting = Helpers.LoadModuleSettings(smartLinkModule.ModuleName);
+
+            String smartLinkUrl = "";
+
+            foreach (ModuleSetting moduleSetting in smartLinkModule.ModuleList_Setting)
+            {
+
+                if (moduleSetting.SettingName.Equals("SmartLinkUrl"))
+                {
+                    smartLinkUrl = moduleSetting.SettingData;
+                }
+            }
+            if (NetworkInterface.GetIsNetworkAvailable() == true)
+            {
+                try
+                {
+                    UniteEDNetwork net = new UniteEDNetwork();
+
+                    //WindowState = FormWindowState.Maximized;
+
+                    browser = new ChromiumWebBrowser(smartLinkUrl)
+                    {
+                        Dock = DockStyle.Fill,
+                    };
+                    panel1.Controls.Add(browser);
+                    browser.FrameLoadEnd += OnBrowserFrameLoadEnd;
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Could not connect to internet", "Network connection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

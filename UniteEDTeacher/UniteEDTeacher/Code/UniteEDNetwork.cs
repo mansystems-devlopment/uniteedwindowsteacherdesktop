@@ -160,8 +160,11 @@ namespace UniteEDTeacher.Code
                 
 
                 Cookie myCookie = new Cookie("MOODLEID", guid.ToString());
+               
+                CookieContainer cookie = new CookieContainer();
+                cookie.Add(new Uri(url), myCookie);
 
-                webRequest.CookieContainer.Add(new Uri(url), myCookie);
+                webRequest.CookieContainer = cookie;
 
 
                 // webRequest.ContentType = "application/json; charset=utf-8";

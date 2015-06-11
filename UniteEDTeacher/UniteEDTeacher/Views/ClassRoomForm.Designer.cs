@@ -51,11 +51,10 @@
             this.Controls.Add(this.classRoomwebBrowser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximizeBox = true;
-            this.MinimizeBox = true;
             this.Name = "ClassRoomForm";
             this.ShowInTaskbar = false;
             this.Text = "ClassRoom";
+            this.Load += new System.EventHandler(this.ClassRoomForm_Load);
             this.ResumeLayout(false);
 
         }

@@ -128,12 +128,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\BaseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\BaseForm.Designer.cs">
-      <DependentUpon>BaseForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\BookStoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,12 +170,6 @@
     <Compile Include="Views\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ShopForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ShopForm.Designer.cs">
-      <DependentUpon>ShopForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\SmartLinkForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,9 +198,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\BaseForm.resx">
-      <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\BookStoreForm.resx">
       <DependentUpon>BookStoreForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,9 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ShopForm.resx">
-      <DependentUpon>ShopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SmartLinkForm.resx">
       <DependentUpon>SmartLinkForm.cs</DependentUpon>

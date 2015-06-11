@@ -47,5 +47,10 @@ namespace UniteEDTeacher.Views
             }
 
         }
+
+        private void ClassRoomForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
