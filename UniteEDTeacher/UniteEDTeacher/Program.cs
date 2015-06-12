@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CefSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,6 +16,9 @@ namespace UniteEDTeacher
         [STAThread]
         static void Main()
         {
+
+            Cef.Initialize(new CefSettings());
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             if (UniteEDTeacher.Properties.Settings.Default.activated)
