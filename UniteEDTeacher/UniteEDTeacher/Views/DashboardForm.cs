@@ -26,10 +26,27 @@ namespace UniteEDTeacher.Views
 
         private void btnMyCourses_Click(object sender, EventArgs e)
         {
-            MyCourses myCourses = new MyCourses("");
-            
-            myCourses.Show();
-
+            ActivationModule MyCoursesModule = new ActivationModule();
+            MyCoursesModule.ModuleName = "moodle";
+            MyCoursesModule.ModuleList_Setting = Helpers.LoadModuleSettings(MyCoursesModule.ModuleName);
+            var myCoursesURL="";
+            foreach (ModuleSetting moduleSetting in MyCoursesModule.ModuleList_Setting)
+            {
+                moduleSetting.SettingName.Equals("moodleLoginUrl", StringComparison.OrdinalIgnoreCase);
+                myCoursesURL = moduleSetting.SettingData;
+                break;
+            }
+            if (NetworkInterface.GetIsNetworkAvailable())
+                try
+                {
+                    System.Diagnostics.Process.Start(myCoursesURL);
+                }
+                catch
+                {
+                    MessageBox.Show("Internet Browser", "Please setup a default Internet Browser", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            else
+                MessageBox.Show("Could not connect to internet", "Network connection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnBookStore_Click(object sender, EventArgs e)
