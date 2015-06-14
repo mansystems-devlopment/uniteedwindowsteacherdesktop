@@ -25,7 +25,10 @@ namespace UniteEDTeacher.Views
         }
 
         private void btnMyCourses_Click(object sender, EventArgs e)
-        {
+        {            
+            MyCourses myForm = new MyCourses();
+            myForm.Show();
+            /*
             ActivationModule MyCoursesModule = new ActivationModule();
             MyCoursesModule.ModuleName = "moodle";
             MyCoursesModule.ModuleList_Setting = Helpers.LoadModuleSettings(MyCoursesModule.ModuleName);
@@ -36,6 +39,7 @@ namespace UniteEDTeacher.Views
                 myCoursesURL = moduleSetting.SettingData;
                 break;
             }
+
             if (NetworkInterface.GetIsNetworkAvailable())
                 try
                 {
@@ -43,10 +47,44 @@ namespace UniteEDTeacher.Views
                 }
                 catch
                 {
-                    MessageBox.Show("Internet Browser", "Please setup a default Internet Browser", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    try
+                    {
+                        System.Diagnostics.Process.Start(@"c:\Program Files\Google\Chrome\Application\chrome.exe", myCoursesURL);
+                    }
+                    catch
+                    {
+
+                        try
+                        {
+                            System.Diagnostics.Process.Start(@"c:\Program Files (x86)\Google\Chrome\Application\chrome.exe", myCoursesURL);
+                        }
+                        catch
+                        {
+                            try
+                            {
+                                System.Diagnostics.Process.Start(@"C:\Program Files\Mozilla Firefox\firefox.exe", myCoursesURL);
+                            }
+                            catch
+                            {
+
+                                try
+                                {
+                                    System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Mozilla Firefox\firefox.exe", myCoursesURL);
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Please setup a default Internet Browser", "Internet Browser", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                }
+
+                            }
+                        }
+                    }
                 }
+
             else
                 MessageBox.Show("Could not connect to internet", "Network connection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            */
         }
 
         private void btnBookStore_Click(object sender, EventArgs e)
