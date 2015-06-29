@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniteEDTeacher", "UniteEDTeacher\UniteEDTeacher.csproj", "{B1B8BFA8-893E-4A7F-85EA-A728A15DA796}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "UniteEDInstaller", "UniteEDInstaller\UniteEDInstaller.vdproj", "{53005A52-093E-4274-99E3-AACC1D5509D0}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "UniteEdInstaller", "UniteEdInstaller\UniteEdInstaller.vdproj", "{807DFFC5-6BB1-4217-A6B0-1BEFC24A39FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +23,12 @@ Global
 		{B1B8BFA8-893E-4A7F-85EA-A728A15DA796}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B1B8BFA8-893E-4A7F-85EA-A728A15DA796}.Release|x86.ActiveCfg = Release|x86
 		{B1B8BFA8-893E-4A7F-85EA-A728A15DA796}.Release|x86.Build.0 = Release|x86
-		{53005A52-093E-4274-99E3-AACC1D5509D0}.Debug|Any CPU.ActiveCfg = Debug
-		{53005A52-093E-4274-99E3-AACC1D5509D0}.Debug|x86.ActiveCfg = Debug
-		{53005A52-093E-4274-99E3-AACC1D5509D0}.Debug|x86.Build.0 = Debug
-		{53005A52-093E-4274-99E3-AACC1D5509D0}.Release|Any CPU.ActiveCfg = Release
-		{53005A52-093E-4274-99E3-AACC1D5509D0}.Release|x86.ActiveCfg = Release
-		{53005A52-093E-4274-99E3-AACC1D5509D0}.Release|x86.Build.0 = Release
+		{807DFFC5-6BB1-4217-A6B0-1BEFC24A39FF}.Debug|Any CPU.ActiveCfg = Debug
+		{807DFFC5-6BB1-4217-A6B0-1BEFC24A39FF}.Debug|x86.ActiveCfg = Debug
+		{807DFFC5-6BB1-4217-A6B0-1BEFC24A39FF}.Debug|x86.Build.0 = Debug
+		{807DFFC5-6BB1-4217-A6B0-1BEFC24A39FF}.Release|Any CPU.ActiveCfg = Release
+		{807DFFC5-6BB1-4217-A6B0-1BEFC24A39FF}.Release|x86.ActiveCfg = Release
+		{807DFFC5-6BB1-4217-A6B0-1BEFC24A39FF}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
