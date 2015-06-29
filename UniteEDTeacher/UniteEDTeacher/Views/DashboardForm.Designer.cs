@@ -65,6 +65,7 @@
             this.splitContainer1.ForeColor = System.Drawing.Color.White;
             this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -77,8 +78,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1161, 692);
-            this.splitContainer1.SplitterDistance = 88;
+            this.splitContainer1.Size = new System.Drawing.Size(1548, 852);
+            this.splitContainer1.SplitterDistance = 108;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 12;
             // 
@@ -87,10 +88,10 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox2.Image = global::UniteEDTeacher.Properties.Resources.colourbar_68;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 80);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 98);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1161, 8);
+            this.pictureBox2.Size = new System.Drawing.Size(1548, 10);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
@@ -99,10 +100,10 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = global::UniteEDTeacher.Properties.Resources.login_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 31);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 38);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 46);
+            this.pictureBox1.Size = new System.Drawing.Size(236, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -115,7 +116,8 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1161, 29);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1548, 36);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -131,51 +133,51 @@
             this.aboutToolStripMenuItem});
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 25);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 32);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // teacherOnlineToolStripMenuItem
             // 
             this.teacherOnlineToolStripMenuItem.Image = global::UniteEDTeacher.Properties.Resources.dialteacher_icon;
             this.teacherOnlineToolStripMenuItem.Name = "teacherOnlineToolStripMenuItem";
-            this.teacherOnlineToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.teacherOnlineToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
             this.teacherOnlineToolStripMenuItem.Text = "Teacher Online";
             this.teacherOnlineToolStripMenuItem.Click += new System.EventHandler(this.teacherOnlineToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(194, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 6);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Image = global::UniteEDTeacher.Properties.Resources.menu_icon;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(194, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(228, 6);
             // 
             // changeAccountToolStripMenuItem
             // 
             this.changeAccountToolStripMenuItem.Name = "changeAccountToolStripMenuItem";
-            this.changeAccountToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.changeAccountToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
             this.changeAccountToolStripMenuItem.Text = "Change Account";
             this.changeAccountToolStripMenuItem.Click += new System.EventHandler(this.changeAccountToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(194, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(228, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -193,9 +195,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnSmartLink);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1161, 603);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1548, 743);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // btnMyCourses
@@ -206,10 +208,10 @@
             this.btnMyCourses.FlatAppearance.BorderSize = 0;
             this.btnMyCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyCourses.ForeColor = System.Drawing.Color.Gray;
-            this.btnMyCourses.Location = new System.Drawing.Point(22, 24);
-            this.btnMyCourses.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnMyCourses.Location = new System.Drawing.Point(29, 30);
+            this.btnMyCourses.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
             this.btnMyCourses.Name = "btnMyCourses";
-            this.btnMyCourses.Size = new System.Drawing.Size(220, 220);
+            this.btnMyCourses.Size = new System.Drawing.Size(293, 271);
             this.btnMyCourses.TabIndex = 1;
             this.btnMyCourses.Text = "MY COURSES";
             this.btnMyCourses.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -224,10 +226,10 @@
             this.btnEReader.FlatAppearance.BorderSize = 0;
             this.btnEReader.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEReader.ForeColor = System.Drawing.Color.Gray;
-            this.btnEReader.Location = new System.Drawing.Point(286, 24);
-            this.btnEReader.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnEReader.Location = new System.Drawing.Point(380, 30);
+            this.btnEReader.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
             this.btnEReader.Name = "btnEReader";
-            this.btnEReader.Size = new System.Drawing.Size(220, 220);
+            this.btnEReader.Size = new System.Drawing.Size(293, 271);
             this.btnEReader.TabIndex = 2;
             this.btnEReader.Text = "E READER";
             this.btnEReader.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -242,14 +244,15 @@
             this.btnCloudbanc.FlatAppearance.BorderSize = 0;
             this.btnCloudbanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloudbanc.ForeColor = System.Drawing.Color.Gray;
-            this.btnCloudbanc.Location = new System.Drawing.Point(550, 24);
-            this.btnCloudbanc.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnCloudbanc.Location = new System.Drawing.Point(731, 30);
+            this.btnCloudbanc.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
             this.btnCloudbanc.Name = "btnCloudbanc";
-            this.btnCloudbanc.Size = new System.Drawing.Size(220, 220);
+            this.btnCloudbanc.Size = new System.Drawing.Size(293, 271);
             this.btnCloudbanc.TabIndex = 5;
             this.btnCloudbanc.Text = "CLOUDBANC";
             this.btnCloudbanc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCloudbanc.UseVisualStyleBackColor = false;
+            this.btnCloudbanc.Visible = false;
             this.btnCloudbanc.Click += new System.EventHandler(this.btnCloudbanc_Click);
             // 
             // btnBookStore
@@ -260,10 +263,10 @@
             this.btnBookStore.FlatAppearance.BorderSize = 0;
             this.btnBookStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookStore.ForeColor = System.Drawing.Color.Gray;
-            this.btnBookStore.Location = new System.Drawing.Point(814, 24);
-            this.btnBookStore.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnBookStore.Location = new System.Drawing.Point(1082, 30);
+            this.btnBookStore.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
             this.btnBookStore.Name = "btnBookStore";
-            this.btnBookStore.Size = new System.Drawing.Size(220, 220);
+            this.btnBookStore.Size = new System.Drawing.Size(293, 271);
             this.btnBookStore.TabIndex = 7;
             this.btnBookStore.Text = "BOOK STORE";
             this.btnBookStore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -278,14 +281,15 @@
             this.btnMedia.FlatAppearance.BorderSize = 0;
             this.btnMedia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMedia.ForeColor = System.Drawing.Color.Gray;
-            this.btnMedia.Location = new System.Drawing.Point(22, 292);
-            this.btnMedia.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnMedia.Location = new System.Drawing.Point(29, 361);
+            this.btnMedia.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
             this.btnMedia.Name = "btnMedia";
-            this.btnMedia.Size = new System.Drawing.Size(220, 220);
+            this.btnMedia.Size = new System.Drawing.Size(293, 271);
             this.btnMedia.TabIndex = 6;
             this.btnMedia.Text = "MEDIA";
             this.btnMedia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMedia.UseVisualStyleBackColor = false;
+            this.btnMedia.Visible = false;
             this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
             // 
             // btnClassRoom
@@ -296,10 +300,10 @@
             this.btnClassRoom.FlatAppearance.BorderSize = 0;
             this.btnClassRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClassRoom.ForeColor = System.Drawing.Color.Gray;
-            this.btnClassRoom.Location = new System.Drawing.Point(286, 292);
-            this.btnClassRoom.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnClassRoom.Location = new System.Drawing.Point(380, 361);
+            this.btnClassRoom.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
             this.btnClassRoom.Name = "btnClassRoom";
-            this.btnClassRoom.Size = new System.Drawing.Size(220, 220);
+            this.btnClassRoom.Size = new System.Drawing.Size(293, 271);
             this.btnClassRoom.TabIndex = 3;
             this.btnClassRoom.Text = "CLASSROOM";
             this.btnClassRoom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -314,10 +318,10 @@
             this.btnSmartLink.FlatAppearance.BorderSize = 0;
             this.btnSmartLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSmartLink.ForeColor = System.Drawing.Color.Gray;
-            this.btnSmartLink.Location = new System.Drawing.Point(550, 292);
-            this.btnSmartLink.Margin = new System.Windows.Forms.Padding(22, 24, 22, 24);
+            this.btnSmartLink.Location = new System.Drawing.Point(731, 361);
+            this.btnSmartLink.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
             this.btnSmartLink.Name = "btnSmartLink";
-            this.btnSmartLink.Size = new System.Drawing.Size(220, 220);
+            this.btnSmartLink.Size = new System.Drawing.Size(293, 271);
             this.btnSmartLink.TabIndex = 4;
             this.btnSmartLink.Text = "SMARTLINK";
             this.btnSmartLink.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -326,15 +330,15 @@
             // 
             // DashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1161, 692);
+            this.ClientSize = new System.Drawing.Size(1548, 852);
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
