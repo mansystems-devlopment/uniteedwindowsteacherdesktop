@@ -29,7 +29,7 @@ namespace UniteEDTeacher
         SolidColorBrush brushBlack = new SolidColorBrush(Colors.Black);
         SolidColorBrush brushGrey = new SolidColorBrush(Colors.LightGray);
         SolidColorBrush brushRed = new SolidColorBrush(Colors.Red);
-
+        String moodlePassword = "";
         public ActivateForm()
         {
             InitializeComponent();
@@ -112,6 +112,18 @@ namespace UniteEDTeacher
 
                                     Helpers.SaveSettings("AllModuleSetting", JsonConvert.SerializeObject(response.OutActivateUser_ModuleList));
 
+                                    ActivationModule MoodleAccountActivationModule = new ActivationModule();
+                                    MoodleAccountActivationModule.ModuleName = "moodle";
+                                    MoodleAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(MoodleAccountActivationModule.ModuleName);
+
+
+                                    foreach (ModuleSetting moduleSetting in MoodleAccountActivationModule.ModuleList_Setting)
+                                    {
+                                        if (moduleSetting.SettingName.Equals("moodlePassword"))
+                                        {
+                                            moodlePassword = moduleSetting.SettingData;
+                                        }
+                                    }
 
                                     foreach (ActivationModule module in response.OutActivateUser_ModuleList)
                                     {
@@ -132,7 +144,7 @@ namespace UniteEDTeacher
 
                                         ));
 
-                                    MessageBox.Show("Activation Successfull", "Activation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Your password is '" + moodlePassword + "' and can be found in your settings.", "Successfully activated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 }
                                 else
