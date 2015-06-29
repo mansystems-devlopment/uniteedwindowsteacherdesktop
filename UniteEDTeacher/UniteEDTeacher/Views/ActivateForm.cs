@@ -29,7 +29,6 @@ namespace UniteEDTeacher
         SolidColorBrush brushBlack = new SolidColorBrush(Colors.Black);
         SolidColorBrush brushGrey = new SolidColorBrush(Colors.LightGray);
         SolidColorBrush brushRed = new SolidColorBrush(Colors.Red);
-        String moodlePassword = "";
         public ActivateForm()
         {
             InitializeComponent();
@@ -112,16 +111,18 @@ namespace UniteEDTeacher
 
                                     Helpers.SaveSettings("AllModuleSetting", JsonConvert.SerializeObject(response.OutActivateUser_ModuleList));
 
-                                    ActivationModule MoodleAccountActivationModule = new ActivationModule();
-                                    MoodleAccountActivationModule.ModuleName = "moodle";
-                                    MoodleAccountActivationModule.ModuleList_Setting = Helpers.LoadModuleSettings(MoodleAccountActivationModule.ModuleName);
+                                    ActivationModule smartLinkModule = new ActivationModule();
+                                    smartLinkModule.ModuleName = "Smartlink";
+                                    smartLinkModule.ModuleList_Setting = Helpers.LoadModuleSettings(smartLinkModule.ModuleName);
 
+                                    String smartLinkPassword = "";
 
-                                    foreach (ModuleSetting moduleSetting in MoodleAccountActivationModule.ModuleList_Setting)
+                                    foreach (ModuleSetting moduleSetting in smartLinkModule.ModuleList_Setting)
                                     {
-                                        if (moduleSetting.SettingName.Equals("moodlePassword"))
+
+                                        if (moduleSetting.SettingName.Equals("SmartLinkpassword"))
                                         {
-                                            moodlePassword = moduleSetting.SettingData;
+                                            smartLinkPassword = moduleSetting.SettingData;
                                         }
                                     }
 
@@ -144,7 +145,7 @@ namespace UniteEDTeacher
 
                                         ));
 
-                                    MessageBox.Show("Your password is '" + moodlePassword + "' and can be found in your settings.", "Successfully activated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Your password is '" + smartLinkPassword + "' and can be found in your settings.", "Successfully activated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 }
                                 else
