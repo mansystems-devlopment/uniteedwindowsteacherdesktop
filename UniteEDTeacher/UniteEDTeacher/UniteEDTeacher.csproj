@@ -290,6 +290,11 @@
     <None Include="Resources\login_logo.png" />
     <Content Include="logo.ico" />
     <Content Include="Resources\launcher.ico" />
+    <None Include="Resources\progressbar.gif" />
+    <None Include="Resources\loading5.gif" />
+    <None Include="Resources\progress_bar_267x14.gif" />
+    <None Include="Resources\loading140.gif" />
+    <None Include="Resources\loading12.gif" />
     <Content Include="UniteEDIcon.ico" />
   </ItemGroup>
   <ItemGroup>

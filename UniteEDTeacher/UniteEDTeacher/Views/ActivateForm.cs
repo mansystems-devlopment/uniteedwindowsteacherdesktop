@@ -42,6 +42,7 @@ namespace UniteEDTeacher
             var c = new CultureInfo("en-GB");
             var r = new RegionInfo(c.LCID);
 
+            
             // create management class object
             ManagementClass mc = new ManagementClass("Win32_ComputerSystem");
             //collection to store all management objects
@@ -72,12 +73,16 @@ namespace UniteEDTeacher
             {
                 if (txtUserid.Text != "")
                 {
+                    pictureBox2.Visible = true;
+                    btnActivate.Visible = false;
+                    txtUserid.Enabled = false;
+
                     UniteEDNetwork net = new UniteEDNetwork();
 
                     string postData = "AppID=";
                     postData += Constant.appId + "&UserID=";
                     postData += txtUserid.Text + "&CellNumber=";
-                    postData += "(Windows no cell)" + "&AppVersion=";
+                    postData += "" + "&AppVersion=";
                     postData += Constant.appVersion + "&AppPackName=";
                     postData += Constant.appPackName + "&DeviceModel=";
                     postData += deviceModel + "&IMEI=";
@@ -111,23 +116,18 @@ namespace UniteEDTeacher
 
                                     Helpers.SaveSettings("AllModuleSetting", JsonConvert.SerializeObject(response.OutActivateUser_ModuleList));
 
-                                    ActivationModule smartLinkModule = new ActivationModule();
-                                    smartLinkModule.ModuleName = "Smartlink";
-                                    smartLinkModule.ModuleList_Setting = Helpers.LoadModuleSettings(smartLinkModule.ModuleName);
-
                                     String smartLinkPassword = "";
-
-                                    foreach (ModuleSetting moduleSetting in smartLinkModule.ModuleList_Setting)
-                                    {
-
-                                        if (moduleSetting.SettingName.Equals("SmartLinkpassword"))
-                                        {
-                                            smartLinkPassword = moduleSetting.SettingData;
-                                        }
-                                    }
-
+                                    
                                     foreach (ActivationModule module in response.OutActivateUser_ModuleList)
                                     {
+                                        foreach (ModuleSetting moduleSetting in module.ModuleList_Setting)
+                                        {
+                                            if (moduleSetting.SettingName.Equals("SmartLinkpassword"))
+                                            {
+                                                smartLinkPassword = moduleSetting.SettingData.ToString();
+                                            }
+                                        }
+                                        
                                         Helpers.SaveSettings(module.ModuleName, JsonConvert.SerializeObject(module.ModuleList_Setting));
 
                                     }
@@ -152,8 +152,10 @@ namespace UniteEDTeacher
                                 {
                                     MessageBox.Show(response.ResultMessage, "Activation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+                                    pictureBox2.Visible = false;
+                                    btnActivate.Visible = true;
+                                    txtUserid.Enabled = true;
                                 }
-
                                 //Check for result code..
                             }
                         }
@@ -161,6 +163,7 @@ namespace UniteEDTeacher
                         {
 
                             Debug.WriteLine(ex.Message + "\n" + ex.StackTrace);
+
                         }
                     }, "ActivateUser?about", postData);
 
