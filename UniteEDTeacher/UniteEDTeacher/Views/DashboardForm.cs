@@ -264,8 +264,70 @@ namespace UniteEDTeacher.Views
         private void DashboardForm_Load(object sender, EventArgs e)
         {
 
+            SettingDataSource sd = new SettingDataSource();
+            foreach (ActivationModule am in sd.ActivationModules)
+            {
+                if (am.ModuleName.Contains("Smartlink"))
+                {
+                    btnSmartLink.Visible = true;
+                }
+                else
+                {
+                    btnSmartLink.Visible = false;
+                }
+                if (am.ModuleName.Contains("e-reader"))
+                {
+                    btnEReader.Visible = true;
+                }
+                else
+                {
+                    btnEReader.Visible = false;
+                }
+                if (am.ModuleName.Contains("Cloudbanc"))
+                {
+                    btnCloudbanc.Visible = true;
+                }
+                else
+                {
+                    btnCloudbanc.Visible = false;
+                }                
+                //Media
+                if (am.ModuleName.Contains("media"))
+                {
+                    btnMedia.Visible = true;
+                }
+                else
+                {
+                    btnMedia.Visible = false;
+                }
+                //Books
+                if (am.ModuleName.Contains("books"))
+                {
+                    btnBookStore.Visible = true;
+                }
+                else
+                {
+                    btnBookStore.Visible = false;
+                }
+                if (am.ModuleName.Contains("ClassRoom"))
+                {
+                    btnClassRoom.Visible = true;
+                }
+                else
+                {
+                    btnClassRoom.Visible = false;
+                }
+                if (am.ModuleName.Contains("moodle"))
+                {
+                    btnMyCourses.Visible = true;
+                }
+                else
+                {
+                    btnClassRoom.Visible = false;
+                }
+            }
+            
         }
-
        
     }
 }
