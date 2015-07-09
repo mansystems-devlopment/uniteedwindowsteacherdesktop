@@ -1574,6 +1574,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -5677,15 +5685,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:UniteED"
-        "ProductCode" = "8:{911B49F4-090F-48A2-AAE0-BA1DD2D6EE1A}"
-        "PackageCode" = "8:{13E829FB-9D44-4339-B9C8-02F8826F36DB}"
+        "ProductCode" = "8:{1D9CD071-D009-46A6-9AD5-5377D19C8D86}"
+        "PackageCode" = "8:{AF4A7284-347C-44F9-8D92-31829A673BE7}"
         "UpgradeCode" = "8:{F357DBD0-7E44-4E92-9BA6-819D911E1CEA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.5"
+        "ProductVersion" = "8:1.0.6"
         "Manufacturer" = "8:Mansystems South Africa"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

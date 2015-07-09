@@ -216,6 +216,7 @@
             this.btnMyCourses.Text = "MY COURSES";
             this.btnMyCourses.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMyCourses.UseVisualStyleBackColor = false;
+            this.btnMyCourses.Visible = false;
             this.btnMyCourses.Click += new System.EventHandler(this.btnMyCourses_Click);
             // 
             // btnEReader
@@ -234,6 +235,7 @@
             this.btnEReader.Text = "E READER";
             this.btnEReader.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEReader.UseVisualStyleBackColor = false;
+            this.btnEReader.Visible = false;
             this.btnEReader.Click += new System.EventHandler(this.btnEReader_Click);
             // 
             // btnCloudbanc
@@ -271,6 +273,7 @@
             this.btnBookStore.Text = "BOOK STORE";
             this.btnBookStore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBookStore.UseVisualStyleBackColor = false;
+            this.btnBookStore.Visible = false;
             this.btnBookStore.Click += new System.EventHandler(this.btnBookStore_Click);
             // 
             // btnMedia
@@ -308,6 +311,7 @@
             this.btnClassRoom.Text = "CLASSROOM";
             this.btnClassRoom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnClassRoom.UseVisualStyleBackColor = false;
+            this.btnClassRoom.Visible = false;
             this.btnClassRoom.Click += new System.EventHandler(this.btnClassRoom_Click);
             // 
             // btnSmartLink
@@ -326,6 +330,7 @@
             this.btnSmartLink.Text = "SMARTLINK";
             this.btnSmartLink.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSmartLink.UseVisualStyleBackColor = false;
+            this.btnSmartLink.Visible = false;
             this.btnSmartLink.Click += new System.EventHandler(this.btnSmartLink_Click);
             // 
             // DashboardForm

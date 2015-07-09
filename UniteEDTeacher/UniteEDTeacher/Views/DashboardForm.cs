@@ -23,7 +23,12 @@ namespace UniteEDTeacher.Views
 
             InitializeComponent();
         }
-
+        string SmartLink = "Smartlink";
+        string Reader = "e-reader";
+        string Mybooks = "books";
+        string ClassRoom = "ClassRoom";
+        string MyCourses = "moodle";
+              
         private void btnMyCourses_Click(object sender, EventArgs e)
         {            
             MyCourses myForm = new MyCourses();
@@ -97,7 +102,7 @@ namespace UniteEDTeacher.Views
         private void btnEReader_Click(object sender, EventArgs e)
         {
             ActivationModule EreaderModule = new ActivationModule();
-            EreaderModule.ModuleName = "e-reader";
+            EreaderModule.ModuleName = Reader.ToString();
             EreaderModule.ModuleList_Setting = Helpers.LoadModuleSettings(EreaderModule.ModuleName);
 
             String EreaderUrl = "";
@@ -161,7 +166,7 @@ namespace UniteEDTeacher.Views
         private void btnClassRoom_Click(object sender, EventArgs e)
         {
             ActivationModule classRoomModule = new ActivationModule();
-            classRoomModule.ModuleName = "ClassRoom";
+            classRoomModule.ModuleName = ClassRoom.ToString();
             classRoomModule.ModuleList_Setting = Helpers.LoadModuleSettings(classRoomModule.ModuleName);
 
             String ClassRoomName = "";
@@ -267,63 +272,41 @@ namespace UniteEDTeacher.Views
             SettingDataSource sd = new SettingDataSource();
             foreach (ActivationModule am in sd.ActivationModules)
             {
-                if (am.ModuleName.Contains("Smartlink"))
+
+                if (am.ModuleName.Contains(SmartLink.ToString()))
                 {
                     btnSmartLink.Visible = true;
                 }
-                else
-                {
-                    btnSmartLink.Visible = false;
-                }
-                if (am.ModuleName.Contains("e-reader"))
+                
+                if (am.ModuleName.Contains(Reader.ToString()))
                 {
                     btnEReader.Visible = true;
                 }
-                else
-                {
-                    btnEReader.Visible = false;
-                }
+                /*
                 if (am.ModuleName.Contains("Cloudbanc"))
                 {
                     btnCloudbanc.Visible = true;
-                }
-                else
-                {
-                    btnCloudbanc.Visible = false;
-                }                
+                }           
                 //Media
                 if (am.ModuleName.Contains("media"))
                 {
                     btnMedia.Visible = true;
-                }
-                else
-                {
-                    btnMedia.Visible = false;
-                }
+                }*/
+
                 //Books
-                if (am.ModuleName.Contains("books"))
+                if (am.ModuleName.Contains(Mybooks.ToString()))
                 {
                     btnBookStore.Visible = true;
                 }
-                else
-                {
-                    btnBookStore.Visible = false;
-                }
-                if (am.ModuleName.Contains("ClassRoom"))
+
+                if (am.ModuleName.Contains(ClassRoom.ToString()))
                 {
                     btnClassRoom.Visible = true;
                 }
-                else
-                {
-                    btnClassRoom.Visible = false;
-                }
-                if (am.ModuleName.Contains("moodle"))
+
+                if (am.ModuleName.Contains(MyCourses.ToString()))
                 {
                     btnMyCourses.Visible = true;
-                }
-                else
-                {
-                    btnClassRoom.Visible = false;
                 }
             }
             
