@@ -299,7 +299,7 @@ namespace UniteEDTeacher.Views
                     btnBookStore.Visible = true;
                 }
 
-                if (am.ModuleName.Contains(ClassRoom.ToString()))
+                if (am.ModuleName.Contains(ClassRoom))
                 {
                     btnClassRoom.Visible = true;
                 }
