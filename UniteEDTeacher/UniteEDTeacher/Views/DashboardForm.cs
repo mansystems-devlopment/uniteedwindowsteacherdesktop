@@ -268,46 +268,40 @@ namespace UniteEDTeacher.Views
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
-
-            SettingDataSource sd = new SettingDataSource();
-            foreach (ActivationModule am in sd.ActivationModules)
+            try
             {
-
-                if (am.ModuleName.Contains(SmartLink.ToString()))
+                string Smartlink = UniteEDTeacher.Properties.Settings.Default.SmartLink;
+                if (Smartlink.Contains("True") || Smartlink.Contains("true"))
                 {
                     btnSmartLink.Visible = true;
                 }
-                
-                if (am.ModuleName.Contains(Reader.ToString()))
-                {
-                    btnEReader.Visible = true;
-                }
-                /*
-                if (am.ModuleName.Contains("Cloudbanc"))
-                {
-                    btnCloudbanc.Visible = true;
-                }           
-                //Media
-                if (am.ModuleName.Contains("media"))
-                {
-                    btnMedia.Visible = true;
-                }*/
 
-                //Books
-                if (am.ModuleName.Contains(Mybooks.ToString()))
+                string Mybooks = UniteEDTeacher.Properties.Settings.Default.MyBooks;
+                if (Mybooks.Contains("True") || Mybooks.Contains("true"))
                 {
                     btnBookStore.Visible = true;
                 }
+                string EReader = UniteEDTeacher.Properties.Settings.Default.Reader;
+                if (EReader.Contains("True") || EReader.Contains("true"))
+                {
+                    btnEReader.Visible = true;
+                }
 
-                if (am.ModuleName.Contains(ClassRoom))
+                string MyClassRoom = UniteEDTeacher.Properties.Settings.Default.Classroom;
+                if (MyClassRoom.Contains("True") || MyClassRoom.Contains("true"))
                 {
                     btnClassRoom.Visible = true;
                 }
 
-                if (am.ModuleName.Contains(MyCourses.ToString()))
+                string MyCourses = UniteEDTeacher.Properties.Settings.Default.Courses;
+                if (MyCourses.Contains("True") || MyCourses.Contains("true"))
                 {
                     btnMyCourses.Visible = true;
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             
         }

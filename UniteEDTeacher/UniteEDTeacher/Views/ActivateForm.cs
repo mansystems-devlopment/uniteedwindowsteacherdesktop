@@ -33,6 +33,11 @@ namespace UniteEDTeacher
         {
             InitializeComponent();
         }
+        string SmartLink = "Smartlink";
+        string Reader = "e-reader";
+        string Mybooks = "books";
+        string ClassRoom = "ClassRoom";
+        string MyCourses = "moodle";
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
@@ -78,7 +83,7 @@ namespace UniteEDTeacher
                     txtUserid.Enabled = false;
 
                     UniteEDNetwork net = new UniteEDNetwork();
-
+                    ModuleStatus(net);
                     string postData = "AppID=";
                     postData += Constant.appId + "&UserID=";
                     postData += txtUserid.Text + "&CellNumber=";
@@ -181,6 +186,101 @@ namespace UniteEDTeacher
 
             }
 
+        }
+        private void ModuleStatus(UniteEDNetwork net)
+        {
+            if (NetworkInterface.GetIsNetworkAvailable() == true)
+            {
+                SettingDataSource sd = new SettingDataSource();
+                foreach (ActivationModule am in sd.ActivationModules)
+                {
+                    string Module = am.ModuleName;
+
+                    string Uid = Helpers.LoadJSONSettings("UserID");
+                    string postData = "UserID=";
+                    postData += Uid.ToString() + "&ModuleName=";
+                    postData += Module + "&AppPackName=";
+                    postData += Constant.appPackName;
+
+                    net.PostData((httpResponse) =>
+                    {
+                        try
+                        {
+                            using (System.IO.StreamReader httpwebStreamReader = new StreamReader(httpResponse.GetResponseStream()))
+                            {
+                                // ProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                // LayoutRoot.IsTapEnabled = true;
+
+                                var re = httpwebStreamReader.ReadToEnd();
+                                //login response
+                                ActivationResponse response = JsonConvert.DeserializeObject<ActivationResponse>(re);
+                                if (response.ResultCode.Equals("0") || response.ResultCode.Equals("200"))
+                                {
+
+                                    dynamic x = Newtonsoft.Json.JsonConvert.DeserializeObject(re);
+                                    var OutAppStatus_OutApps = x.OutAppStatus_OutApps;
+                                    foreach (var item in OutAppStatus_OutApps)
+                                    {
+                                        var Active = item.Active;
+                                        var ModuleName = item.ModuleName;
+
+                                        string ModuleData = ModuleName + ' ' + Active;
+
+                                        if (ModuleData.Contains(SmartLink.ToString()))
+                                        {
+                                            UniteEDTeacher.Properties.Settings.Default.SmartLink = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.Save();
+                                        }
+                                        if (ModuleData.Contains(Mybooks.ToString()))
+                                        {
+                                            UniteEDTeacher.Properties.Settings.Default.MyBooks = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.Save();
+                                        }
+                                        if (ModuleData.Contains(Reader.ToString()))
+                                        {
+                                            UniteEDTeacher.Properties.Settings.Default.Reader = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.Save();
+                                        }
+                                        //if (ModuleData.Contains(Media.ToString()))
+                                        //{
+                                        //    UniteEDTeacher.Properties.Settings.Default.Media = ModuleData;
+                                        //    UniteEDTeacher.Properties.Settings.Default.Save();
+                                        //}
+                                        //if (ModuleData.Contains(Cloudbanc.ToString()))
+                                        //{
+                                        //    UniteEDTeacher.Properties.Settings.Default.Cloudbanc = ModuleData;
+                                        //    UniteEDTeacher.Properties.Settings.Default.Save();
+                                        //}
+                                        if (ModuleData.Contains(ClassRoom.ToString()))
+                                        {
+                                            UniteEDTeacher.Properties.Settings.Default.Classroom = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.Save();
+                                        }
+                                        if (ModuleData.Contains(MyCourses.ToString()))
+                                        {
+                                            UniteEDTeacher.Properties.Settings.Default.Courses = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.Save();
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+
+                            Debug.WriteLine(ex.Message + "\n" + ex.StackTrace);
+                        }
+                    }, "GetAppModuleSettings?about", postData);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Could not connect to internet", "Network connection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void ActivatePage_FormClosing(object sender, FormClosingEventArgs e)

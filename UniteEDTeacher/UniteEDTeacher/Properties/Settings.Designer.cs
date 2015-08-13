@@ -34,5 +34,65 @@ namespace UniteEDTeacher.Properties {
                 this["activated"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SmartLink {
+            get {
+                return ((string)(this["SmartLink"]));
+            }
+            set {
+                this["SmartLink"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Reader {
+            get {
+                return ((string)(this["Reader"]));
+            }
+            set {
+                this["Reader"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MyBooks {
+            get {
+                return ((string)(this["MyBooks"]));
+            }
+            set {
+                this["MyBooks"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Classroom {
+            get {
+                return ((string)(this["Classroom"]));
+            }
+            set {
+                this["Classroom"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Courses {
+            get {
+                return ((string)(this["Courses"]));
+            }
+            set {
+                this["Courses"] = value;
+            }
+        }
     }
 }
