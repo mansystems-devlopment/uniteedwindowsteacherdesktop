@@ -168,6 +168,8 @@ namespace UniteEDTeacher
                         {
 
                             Debug.WriteLine(ex.Message + "\n" + ex.StackTrace);
+                            MessageBox.Show(ex.Message);
+
 
                         }
                     }, "ActivateUser?about", postData);
