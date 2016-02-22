@@ -83,7 +83,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MyCourses";
-            this.ShowInTaskbar = false;
             this.Text = "My Courses";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MyCourses_FormClosing);
             this.Load += new System.EventHandler(this.MyCourses_Load);

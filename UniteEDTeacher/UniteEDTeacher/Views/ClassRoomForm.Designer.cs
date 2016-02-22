@@ -36,23 +36,22 @@
             // 
             this.classRoomwebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.classRoomwebBrowser.Location = new System.Drawing.Point(0, 0);
-            this.classRoomwebBrowser.Margin = new System.Windows.Forms.Padding(2);
-            this.classRoomwebBrowser.MinimumSize = new System.Drawing.Size(15, 16);
+            this.classRoomwebBrowser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.classRoomwebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.classRoomwebBrowser.Name = "classRoomwebBrowser";
             this.classRoomwebBrowser.ScriptErrorsSuppressed = true;
-            this.classRoomwebBrowser.Size = new System.Drawing.Size(1138, 603);
+            this.classRoomwebBrowser.Size = new System.Drawing.Size(1517, 742);
             this.classRoomwebBrowser.TabIndex = 0;
             // 
             // ClassRoomForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 603);
+            this.ClientSize = new System.Drawing.Size(1517, 742);
             this.Controls.Add(this.classRoomwebBrowser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClassRoomForm";
-            this.ShowInTaskbar = false;
             this.Text = "ClassRoom";
             this.Load += new System.EventHandler(this.ClassRoomForm_Load);
             this.ResumeLayout(false);
