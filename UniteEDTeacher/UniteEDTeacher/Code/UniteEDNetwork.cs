@@ -92,6 +92,7 @@ namespace UniteEDTeacher.Code
             {
 
                 Debug.WriteLine(ex.Message + "\n" + ex.StackTrace);
+                MessageBox.Show(ex.Message);
             }
             //return received;
         }

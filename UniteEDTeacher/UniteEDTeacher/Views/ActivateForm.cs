@@ -274,6 +274,7 @@ namespace UniteEDTeacher
                         {
 
                             Debug.WriteLine(ex.Message + "\n" + ex.StackTrace);
+                            MessageBox.Show(ex.Message);
                         }
                     }, "GetAppModuleSettings?about", postData);
 
