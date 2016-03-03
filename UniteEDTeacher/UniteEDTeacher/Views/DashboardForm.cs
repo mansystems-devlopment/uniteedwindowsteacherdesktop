@@ -28,6 +28,7 @@ namespace UniteEDTeacher.Views
         string Mybooks = "books";
         string ClassRoom = "ClassRoom";
         string MyCourses = "moodle";
+        string Cloudbanc = "Cloudbanc";
               
         private void btnMyCourses_Click(object sender, EventArgs e)
         {            
@@ -295,6 +296,12 @@ namespace UniteEDTeacher.Views
 
                 string MyCourses = UniteEDTeacher.Properties.Settings.Default.Courses;
                 if (MyCourses.Contains("True") || MyCourses.Contains("true"))
+                {
+                    btnMyCourses.Visible = true;
+                }
+
+                string Cloudbanc = UniteEDTeacher.Properties.Settings.Default.Cloudbanc;
+                if (Cloudbanc.Contains("True") || Cloudbanc.Contains("true"))
                 {
                     btnMyCourses.Visible = true;
                 }

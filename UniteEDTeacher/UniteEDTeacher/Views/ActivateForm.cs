@@ -38,6 +38,7 @@ namespace UniteEDTeacher
         string Mybooks = "books";
         string ClassRoom = "ClassRoom";
         string MyCourses = "moodle";
+        string Cloudbanc = "Cloudbanc";
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
@@ -248,11 +249,11 @@ namespace UniteEDTeacher
                                         //    UniteEDTeacher.Properties.Settings.Default.Media = ModuleData;
                                         //    UniteEDTeacher.Properties.Settings.Default.Save();
                                         //}
-                                        //if (ModuleData.Contains(Cloudbanc.ToString()))
-                                        //{
-                                        //    UniteEDTeacher.Properties.Settings.Default.Cloudbanc = ModuleData;
-                                        //    UniteEDTeacher.Properties.Settings.Default.Save();
-                                        //}
+                                        if (ModuleData.Contains(Cloudbanc.ToString()))
+                                        {
+                                            UniteEDTeacher.Properties.Settings.Default.Cloudbanc = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.Save();
+                                        }
                                         if (ModuleData.Contains(ClassRoom.ToString()))
                                         {
                                             UniteEDTeacher.Properties.Settings.Default.Classroom = ModuleData;
