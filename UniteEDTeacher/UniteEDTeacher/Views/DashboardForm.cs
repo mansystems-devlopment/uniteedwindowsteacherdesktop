@@ -303,7 +303,7 @@ namespace UniteEDTeacher.Views
                 string Cloudbanc = UniteEDTeacher.Properties.Settings.Default.Cloudbanc;
                 if (Cloudbanc.Contains("True") || Cloudbanc.Contains("true"))
                 {
-                    btnMyCourses.Visible = true;
+                    btnCloudbanc.Visible = true;
                 }
             }
             catch (Exception ex)
