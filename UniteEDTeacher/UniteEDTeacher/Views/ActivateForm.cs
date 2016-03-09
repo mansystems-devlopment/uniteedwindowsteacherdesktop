@@ -211,23 +211,16 @@ namespace UniteEDTeacher
                         {
                             using (System.IO.StreamReader httpwebStreamReader = new StreamReader(httpResponse.GetResponseStream()))
                             {
-                                // ProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                                // LayoutRoot.IsTapEnabled = true;
-
                                 var re = httpwebStreamReader.ReadToEnd();
-                                //login response
-                                ActivationResponse response = JsonConvert.DeserializeObject<ActivationResponse>(re);
-                                if (response.ResultCode.Equals("0") || response.ResultCode.Equals("200"))
+
+                                dynamic ms = Newtonsoft.Json.JsonConvert.DeserializeObject(re);
+                                if (ms.ResultCode.Equals("0") || ms.ResultCode.Equals("200"))
                                 {
-
-                                    dynamic x = Newtonsoft.Json.JsonConvert.DeserializeObject(re);
-                                    var OutAppStatus_OutApps = x.OutAppStatus_OutApps;
-                                    foreach (var item in OutAppStatus_OutApps)
+                                    foreach (var item in ms.OutAppStatus_OutApps)
                                     {
-                                        var Active = item.Active;
-                                        var ModuleName = item.ModuleName;
-
-                                        string ModuleData = ModuleName + ' ' + Active;
+                                        //var Active = item.Active;
+                                        //var ModuleName = item.ModuleName;
+                                        string ModuleData = item.ModuleName + ' ' + item.Active;
 
                                         if (ModuleData.Contains(SmartLink.ToString()))
                                         {
