@@ -5659,19 +5659,28 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:UniteED"
+<<<<<<< HEAD
         "ProductCode" = "8:{F85AD183-9CC3-4B1A-9512-4F9503448CBA}"
         "PackageCode" = "8:{3EEB396A-8449-4BF6-833B-6E3953E14F5A}"
+=======
+        "ProductCode" = "8:{F312926D-2B8A-424E-BE0A-AAF229BEA0FB}"
+        "PackageCode" = "8:{7A9425FA-7250-445A-8045-14F3DA952A39}"
+>>>>>>> fdae06faf2d929a2730afc742588de6ec257eacf
         "UpgradeCode" = "8:{F357DBD0-7E44-4E92-9BA6-819D911E1CEA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.9"
+        "ProductVersion" = "8:1.0.11"
         "Manufacturer" = "8:Mansystems South Africa"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
+<<<<<<< HEAD
         "Title" = "8:UniteEdInstaller (Dev)"
+=======
+        "Title" = "8:UniteEd VanDyk Installer"
+>>>>>>> fdae06faf2d929a2730afc742588de6ec257eacf
         "Subject" = "8:"
         "ARPCONTACT" = "8:Mansystems South Africa"
         "Keywords" = "8:"
