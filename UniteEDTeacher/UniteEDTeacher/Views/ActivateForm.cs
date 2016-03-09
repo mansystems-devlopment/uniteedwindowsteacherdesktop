@@ -230,37 +230,37 @@ namespace UniteEDTeacher
 
                                         if (ModuleData.Contains(SmartLink.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.SmartLink = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.SmartLink = Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
                                         if (ModuleData.Contains(Mybooks.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.MyBooks = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.MyBooks = Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
                                         if (ModuleData.Contains(Reader.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.Reader = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.Reader = Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
                                         //if (ModuleData.Contains(Media.ToString()))
                                         //{
-                                        //    UniteEDTeacher.Properties.Settings.Default.Media = ModuleData;
+                                        //    UniteEDTeacher.Properties.Settings.Default.Media = Active;
                                         //    UniteEDTeacher.Properties.Settings.Default.Save();
                                         //}
                                         //if (ModuleData.Contains(Cloudbanc.ToString()))
                                         //{
-                                        //    UniteEDTeacher.Properties.Settings.Default.Cloudbanc = ModuleData;
+                                        //    UniteEDTeacher.Properties.Settings.Default.Cloudbanc = Active;
                                         //    UniteEDTeacher.Properties.Settings.Default.Save();
                                         //}
                                         if (ModuleData.Contains(ClassRoom.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.Classroom = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.Classroom = Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
                                         if (ModuleData.Contains(MyCourses.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.Courses = ModuleData;
+                                            UniteEDTeacher.Properties.Settings.Default.Courses = Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
 
