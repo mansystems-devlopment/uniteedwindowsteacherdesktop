@@ -42,16 +42,6 @@ namespace UniteEDTeacher.Code
                 t = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
             return t;
         }
-
-        public static T Load1(string fileName)
-        {
-            T t = new T();
-            string path = @specificFolder + fileName + ".modulestatussetting";
-
-            if (File.Exists(path))
-                t = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
-            return t;
-        }
         public static void createFolder(){
        
 

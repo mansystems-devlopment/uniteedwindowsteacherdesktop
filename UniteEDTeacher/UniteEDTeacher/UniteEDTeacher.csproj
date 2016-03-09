@@ -134,6 +134,7 @@
     <Compile Include="Serialization\LevelInfo.cs" />
     <Compile Include="Serialization\LoginResponse.cs" />
     <Compile Include="Serialization\ModuleSetting.cs" />
+    <Compile Include="Serialization\ModuleStatus.cs" />
     <Compile Include="Serialization\Session.cs" />
     <Compile Include="Serialization\SubjectInfo.cs" />
     <Compile Include="Serialization\TeacherInfo.cs" />

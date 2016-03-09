@@ -38,6 +38,7 @@ namespace UniteEDTeacher
         string Mybooks = "books";
         string ClassRoom = "ClassRoom";
         string MyCourses = "moodle";
+        string Cloudbanc = "Cloudbanc";
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
@@ -46,7 +47,6 @@ namespace UniteEDTeacher
             string deviceSerialNumber = "";
             var c = new CultureInfo("en-GB");
             var r = new RegionInfo(c.LCID);
-
             
             // create management class object
             ManagementClass mc = new ManagementClass("Win32_ComputerSystem");
@@ -83,7 +83,7 @@ namespace UniteEDTeacher
                     txtUserid.Enabled = false;
 
                     UniteEDNetwork net = new UniteEDNetwork();
-                    ModuleStatus(net);
+                    
                     string postData = "AppID=";
                     postData += Constant.appId + "&UserID=";
                     postData += txtUserid.Text + "&CellNumber=";
@@ -133,13 +133,17 @@ namespace UniteEDTeacher
                                             }
                                         }
                                         
-                                        Helpers.SaveSettings(module.ModuleName, JsonConvert.SerializeObject(module.ModuleList_Setting));
+                                        Helpers.SaveSettings(module.ModuleName, JsonConvert.SerializeObject(module.ModuleList_Setting));                                       
 
                                     }
+                                    goto ModuleStatus;
+                                ModuleStatus:
+                                    ModuleStatus(net); 
 
                                     this.Invoke(
                                         (Action)(() =>
-                                            {
+                                            { 
+
                                                 UniteEDTeacher.Properties.Settings.Default.activated = true;
                                                 UniteEDTeacher.Properties.Settings.Default.Save();
 
@@ -189,6 +193,7 @@ namespace UniteEDTeacher
             }
 
         }
+
         private void ModuleStatus(UniteEDNetwork net)
         {
             if (NetworkInterface.GetIsNetworkAvailable() == true)
@@ -196,6 +201,7 @@ namespace UniteEDTeacher
                 SettingDataSource sd = new SettingDataSource();
                 foreach (ActivationModule am in sd.ActivationModules)
                 {
+                    
                     string Module = am.ModuleName;
 
                     string Uid = Helpers.LoadJSONSettings("UserID");
@@ -248,11 +254,11 @@ namespace UniteEDTeacher
                                         //    UniteEDTeacher.Properties.Settings.Default.Media = Active;
                                         //    UniteEDTeacher.Properties.Settings.Default.Save();
                                         //}
-                                        //if (ModuleData.Contains(Cloudbanc.ToString()))
-                                        //{
-                                        //    UniteEDTeacher.Properties.Settings.Default.Cloudbanc = Active;
-                                        //    UniteEDTeacher.Properties.Settings.Default.Save();
-                                        //}
+                                        if (ModuleData.Contains(Cloudbanc.ToString()))
+                                        {
+                                            UniteEDTeacher.Properties.Settings.Default.Cloudbanc = Active;
+                                            UniteEDTeacher.Properties.Settings.Default.Save();
+                                        }
                                         if (ModuleData.Contains(ClassRoom.ToString()))
                                         {
                                             UniteEDTeacher.Properties.Settings.Default.Classroom = Active;

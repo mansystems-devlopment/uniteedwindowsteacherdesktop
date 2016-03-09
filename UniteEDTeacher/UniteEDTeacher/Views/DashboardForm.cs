@@ -271,6 +271,11 @@ namespace UniteEDTeacher.Views
         {
             try
             {
+                var ms = new List<ModuleStatus>();
+                foreach (var item in ms)
+                {
+
+                }
                 string Smartlink = UniteEDTeacher.Properties.Settings.Default.SmartLink;
                 if (Smartlink.Contains("True") || Smartlink.Contains("true"))
                 {
