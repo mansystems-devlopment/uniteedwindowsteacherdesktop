@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Management;
@@ -162,7 +163,7 @@ namespace UniteEDTeacher.Views
                     MessageBox.Show("Could not connect to internet", "Network connection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-        }
+        }        
 
         private void btnClassRoom_Click(object sender, EventArgs e)
         {
@@ -188,23 +189,13 @@ namespace UniteEDTeacher.Views
 
             if (Helpers.checkInstalled(ClassRoomName))
             {
-
-                try
+                goto killProcess;
+                killProcess:
+                foreach (var process in Process.GetProcessesByName(ExeName))
                 {
-                    System.Diagnostics.Process.Start(@"C:\Program Files\Mythware\Classroom Management by Mythware\" + ExeName);
+                    process.Kill();
                 }
-                catch
-                {
-
-                    try
-                    {
-                        System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Mythware\Classroom Management by Mythware\" + ExeName);
-                    }
-                    catch
-                    {
-                        MessageBox.Show("There was an Error Opening the application", "Open ClassRoom", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                LaunchApp(ExeName);
             }
             else
             {
@@ -214,6 +205,25 @@ namespace UniteEDTeacher.Views
                 new ClassRoomForm().Show();
             }
             
+        }
+        private void LaunchApp(string ExeName)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(@"C:\Program Files\Mythware\Classroom Management by Mythware\" + ExeName);
+            }
+            catch
+            {
+
+                try
+                {
+                    System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Mythware\Classroom Management by Mythware\" + ExeName);
+                }
+                catch
+                {
+                    MessageBox.Show("There was an Error Opening the application", "Open ClassRoom", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnSmartLink_Click(object sender, EventArgs e)

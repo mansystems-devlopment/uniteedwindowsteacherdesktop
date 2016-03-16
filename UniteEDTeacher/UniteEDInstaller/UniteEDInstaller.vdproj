@@ -1126,6 +1126,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D40035FFBF5CF9919162C8E369E22213"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_BDB51480CFBC4C58BF51B74A91744927"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1145,12 +1151,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_ADBE5D8BC68D4E0DAF9AB7399E2A9D6A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D40035FFBF5CF9919162C8E369E22213"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -5659,19 +5659,19 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:UniteED"
-        "ProductCode" = "8:{0F23FF86-3654-4B06-82DF-3E1ECF77F7D6}"
-        "PackageCode" = "8:{DA0A7AC7-9B2E-467B-BBAF-601939FA5DC6}"
+        "ProductCode" = "8:{8A73C39D-9B94-46F8-8CA8-D086150569ED}"
+        "PackageCode" = "8:{DB235B94-0635-4D80-B00C-3C101D39989A}"
         "UpgradeCode" = "8:{F357DBD0-7E44-4E92-9BA6-819D911E1CEA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.11"
+        "ProductVersion" = "8:1.0.12"
         "Manufacturer" = "8:Mansystems South Africa"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:UniteEd VanDyk Installer"
+        "Title" = "8:UniteEd Thronview Installer"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Mansystems South Africa"
         "Keywords" = "8:"
