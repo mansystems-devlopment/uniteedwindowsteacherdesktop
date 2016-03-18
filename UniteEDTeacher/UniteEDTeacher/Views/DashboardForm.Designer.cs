@@ -49,6 +49,7 @@
             this.btnMedia = new System.Windows.Forms.Button();
             this.btnClassRoom = new System.Windows.Forms.Button();
             this.btnSmartLink = new System.Windows.Forms.Button();
+            this.btnEContent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -140,44 +141,44 @@
             // 
             this.teacherOnlineToolStripMenuItem.Image = global::UniteEDTeacher.Properties.Resources.dialteacher_icon;
             this.teacherOnlineToolStripMenuItem.Name = "teacherOnlineToolStripMenuItem";
-            this.teacherOnlineToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
+            this.teacherOnlineToolStripMenuItem.Size = new System.Drawing.Size(233, 32);
             this.teacherOnlineToolStripMenuItem.Text = "Teacher Online";
             this.teacherOnlineToolStripMenuItem.Click += new System.EventHandler(this.teacherOnlineToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(230, 6);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Image = global::UniteEDTeacher.Properties.Resources.menu_icon;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(233, 32);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(228, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(230, 6);
             // 
             // changeAccountToolStripMenuItem
             // 
             this.changeAccountToolStripMenuItem.Name = "changeAccountToolStripMenuItem";
-            this.changeAccountToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
+            this.changeAccountToolStripMenuItem.Size = new System.Drawing.Size(233, 32);
             this.changeAccountToolStripMenuItem.Text = "Change Account";
             this.changeAccountToolStripMenuItem.Click += new System.EventHandler(this.changeAccountToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(228, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(230, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(233, 32);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -193,6 +194,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnMedia);
             this.flowLayoutPanel1.Controls.Add(this.btnClassRoom);
             this.flowLayoutPanel1.Controls.Add(this.btnSmartLink);
+            this.flowLayoutPanel1.Controls.Add(this.btnEContent);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
@@ -333,6 +335,25 @@
             this.btnSmartLink.Visible = false;
             this.btnSmartLink.Click += new System.EventHandler(this.btnSmartLink_Click);
             // 
+            // btnEContent
+            // 
+            this.btnEContent.BackColor = System.Drawing.Color.Transparent;
+            this.btnEContent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEContent.BackgroundImage")));
+            this.btnEContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEContent.FlatAppearance.BorderSize = 0;
+            this.btnEContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEContent.ForeColor = System.Drawing.Color.Gray;
+            this.btnEContent.Location = new System.Drawing.Point(1082, 361);
+            this.btnEContent.Margin = new System.Windows.Forms.Padding(29, 30, 29, 30);
+            this.btnEContent.Name = "btnEContent";
+            this.btnEContent.Size = new System.Drawing.Size(293, 271);
+            this.btnEContent.TabIndex = 8;
+            this.btnEContent.Text = "E-CONTENT";
+            this.btnEContent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEContent.UseVisualStyleBackColor = false;
+            this.btnEContent.Visible = false;
+            this.btnEContent.Click += new System.EventHandler(this.btnEContent_Click);
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -386,5 +407,6 @@
         private System.Windows.Forms.ToolStripMenuItem changeAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Button btnEContent;
     }
 }

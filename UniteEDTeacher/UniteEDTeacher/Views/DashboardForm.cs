@@ -24,12 +24,12 @@ namespace UniteEDTeacher.Views
 
             InitializeComponent();
         }
-        string SmartLink = "Smartlink";
+        //string SmartLink = "Smartlink";
         string Reader = "e-reader";
-        string Mybooks = "books";
+        //string Mybooks = "books";
         string ClassRoom = "ClassRoom";
-        string MyCourses = "moodle";
-        string Cloudbanc = "Cloudbanc";
+        //string MyCourses = "moodle";
+       // string Cloudbanc = "Cloudbanc";
               
         private void btnMyCourses_Click(object sender, EventArgs e)
         {            
@@ -249,6 +249,13 @@ namespace UniteEDTeacher.Views
             myForm.Show();
         }
 
+        private void btnEContent_Click(object sender, EventArgs e)
+        {
+            EContentForm eContentForm = new EContentForm();
+
+            eContentForm.Show();
+        }
+
         private void DashboardForm_FormClosing(object sender, FormClosingEventArgs e)
         {
 
@@ -281,11 +288,6 @@ namespace UniteEDTeacher.Views
         {
             try
             {
-                var ms = new List<ModuleStatus>();
-                foreach (var item in ms)
-                {
-
-                }
                 string Smartlink = UniteEDTeacher.Properties.Settings.Default.SmartLink;
                 if (Smartlink.Contains("True") || Smartlink.Contains("true"))
                 {
@@ -320,6 +322,11 @@ namespace UniteEDTeacher.Views
                 {
                     btnCloudbanc.Visible = true;
                 }
+                string EduDoc = UniteEDTeacher.Properties.Settings.Default.EduDoc;
+                if (EduDoc.Contains("True") || EduDoc.Contains("true"))
+                {
+                    btnEContent.Visible = true;
+                }
             }
             catch (Exception ex)
             {
@@ -327,6 +334,8 @@ namespace UniteEDTeacher.Views
             }
             
         }
+
+        
        
     }
 }

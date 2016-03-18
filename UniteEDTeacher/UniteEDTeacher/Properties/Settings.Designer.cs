@@ -106,5 +106,17 @@ namespace UniteEDTeacher.Properties {
                 this["Cloudbanc"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string EduDoc {
+            get {
+                return ((string)(this["EduDoc"]));
+            }
+            set {
+                this["EduDoc"] = value;
+            }
+        }
     }
 }

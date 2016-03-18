@@ -39,6 +39,7 @@ namespace UniteEDTeacher
         string ClassRoom = "ClassRoom";
         string MyCourses = "moodle";
         string Cloudbanc = "Cloudbanc";
+        string EduDoc = "EduDoc";
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
@@ -136,9 +137,11 @@ namespace UniteEDTeacher
                                         Helpers.SaveSettings(module.ModuleName, JsonConvert.SerializeObject(module.ModuleList_Setting));                                       
 
                                     }
-                                    goto ModuleStatus;
-                                ModuleStatus:
-                                    ModuleStatus(net); 
+
+                                    this.Invoke((MethodInvoker)delegate
+                                    {
+                                        ModuleStatus(net);
+                                    });
 
                                     this.Invoke(
                                         (Action)(() =>
@@ -160,10 +163,15 @@ namespace UniteEDTeacher
                                 else
                                 {
                                     MessageBox.Show(response.ResultMessage, "Activation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                                    pictureBox2.Visible = false;
-                                    btnActivate.Visible = true;
-                                    txtUserid.Enabled = true;
+                                    this.Invoke(
+                                        (Action)(() =>
+                                        {
+                                            pictureBox2.Visible = false;
+                                            btnActivate.Visible = true;
+                                            txtUserid.Enabled = true;
+                                            
+                                        } ));
+                                    
                                 }
                                 //Check for result code..
                             }
@@ -249,11 +257,11 @@ namespace UniteEDTeacher
                                             UniteEDTeacher.Properties.Settings.Default.Reader = Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
-                                        //if (ModuleData.Contains(Media.ToString()))
-                                        //{
-                                        //    UniteEDTeacher.Properties.Settings.Default.Media = Active;
-                                        //    UniteEDTeacher.Properties.Settings.Default.Save();
-                                        //}
+                                        if (ModuleData.Contains(EduDoc.ToString()))
+                                        {
+                                            UniteEDTeacher.Properties.Settings.Default.EduDoc = Active;
+                                            UniteEDTeacher.Properties.Settings.Default.Save();
+                                        }
                                         if (ModuleData.Contains(Cloudbanc.ToString()))
                                         {
                                             UniteEDTeacher.Properties.Settings.Default.Cloudbanc = Active;
