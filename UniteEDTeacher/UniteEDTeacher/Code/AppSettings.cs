@@ -26,6 +26,15 @@ namespace UniteEDTeacher.Code
             File.WriteAllText(path, JsonConvert.SerializeObject(this));
         }
 
+         public void SaveStatus()
+        {
+            createFolder();
+
+            string path = @specificFolder + DEFAULT_FILENAME + ".modulestatus";
+
+            File.WriteAllText(path, JsonConvert.SerializeObject(this));
+        }
+
         public static void Save(T pSettings, string fileName)
         {
             createFolder();

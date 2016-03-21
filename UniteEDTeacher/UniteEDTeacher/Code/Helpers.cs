@@ -37,6 +37,16 @@ namespace UniteEDTeacher.Code
             lms.Save();
         }
 
+        public static void SaveStatus(string ModuleName, string Active)
+        {
+
+            ModuleStatus lms = new ModuleStatus();
+            lms.DEFAULT_FILENAME = ModuleName;
+            lms.ModuleName = ModuleName;
+            lms.Active = Active;
+            lms.SaveStatus();
+        }
+
         public static void SaveModuleSettings(List<ModuleSetting> settings)
         {
             foreach (ModuleSetting setting in settings) {

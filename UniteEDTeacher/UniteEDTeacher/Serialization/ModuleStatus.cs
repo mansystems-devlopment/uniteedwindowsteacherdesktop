@@ -7,7 +7,7 @@ using UniteEDTeacher.Code;
 
 namespace UniteEDTeacher.Serialization
 {
-    public class ModuleStatus //: AppSettings<ModuleStatus>
+    public class ModuleStatus : AppSettings<ModuleStatus>
     {
         public String ModuleName { get; set; }
         public String Active { get; set; }

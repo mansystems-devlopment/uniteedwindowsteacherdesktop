@@ -14,5 +14,7 @@ namespace UniteEDTeacher.Serialization
         public String DivisionName { get; set; }
         public string TicketNumber { get; set; }
         public List<ActivationModule> OutActivateUser_ModuleList { get; set; }
+        public List<ModuleStatus> OutAppStatus_OutApps { get; set; }
+        
     }
 }

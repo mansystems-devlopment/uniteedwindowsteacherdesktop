@@ -141,21 +141,9 @@ namespace UniteEDTeacher
                                     this.Invoke((MethodInvoker)delegate
                                     {
                                         ModuleStatus(net);
+                                        frm.Hide();
+                                        showDashboard();
                                     });
-
-                                    this.Invoke(
-                                        (Action)(() =>
-                                            { 
-
-                                                UniteEDTeacher.Properties.Settings.Default.activated = true;
-                                                UniteEDTeacher.Properties.Settings.Default.Save();
-
-                                                frm.Hide();
-                                                DashboardForm dashboardPage = new DashboardForm();
-                                                dashboardPage.Show();
-                                            }
-
-                                        ));
 
                                     MessageBox.Show("Your password is '" + smartLinkPassword + "' and can be found in your settings.", "Successfully activated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -202,6 +190,20 @@ namespace UniteEDTeacher
 
         }
 
+        private void showDashboard()
+        {
+            this.Invoke(
+                (Action)(() =>
+                  {
+                    UniteEDTeacher.Properties.Settings.Default.activated = true;
+                    UniteEDTeacher.Properties.Settings.Default.Save();
+
+                    DashboardForm dashboardPage = new DashboardForm();
+                    dashboardPage.Show();
+                  }
+               ));
+        }
+
         private void ModuleStatus(UniteEDNetwork net)
         {
             if (NetworkInterface.GetIsNetworkAvailable() == true)
@@ -232,54 +234,45 @@ namespace UniteEDTeacher
                                 ActivationResponse response = JsonConvert.DeserializeObject<ActivationResponse>(re);
                                 if (response.ResultCode.Equals("0") || response.ResultCode.Equals("200"))
                                 {
-
-                                    dynamic x = Newtonsoft.Json.JsonConvert.DeserializeObject(re);
-                                    var OutAppStatus_OutApps = x.OutAppStatus_OutApps;
-                                    foreach (var item in OutAppStatus_OutApps)
+                                    foreach (ModuleStatus module in response.OutAppStatus_OutApps)
                                     {
-                                        var Active = item.Active;
-                                        var ModuleName = item.ModuleName;
-
-                                        string ModuleData = ModuleName + ' ' + Active;
-
-                                        if (ModuleData.Contains(SmartLink.ToString()))
+                                        if (module.ModuleName.Equals(SmartLink.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.SmartLink = Active;
+                                            UniteEDTeacher.Properties.Settings.Default.SmartLink = module.Active;
+                                            UniteEDTeacher.Properties.Settings.Default.Save();
+                                            //Helpers.SaveStatus(module.ModuleName, JsonConvert.SerializeObject(module.Active));  
+                                        }
+                                        if (module.ModuleName.Equals(Mybooks.ToString()))
+                                        {
+                                            UniteEDTeacher.Properties.Settings.Default.MyBooks = module.Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
-                                        if (ModuleData.Contains(Mybooks.ToString()))
+                                        if (module.ModuleName.Equals(Reader.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.MyBooks = Active;
+                                            UniteEDTeacher.Properties.Settings.Default.Reader = module.Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
-                                        if (ModuleData.Contains(Reader.ToString()))
+                                        if (module.ModuleName.Equals(EduDoc.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.Reader = Active;
+                                            UniteEDTeacher.Properties.Settings.Default.EduDoc = module.Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
-                                        if (ModuleData.Contains(EduDoc.ToString()))
+                                        if (module.ModuleName.Equals(Cloudbanc.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.EduDoc = Active;
+                                            UniteEDTeacher.Properties.Settings.Default.Cloudbanc = module.Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
-                                        if (ModuleData.Contains(Cloudbanc.ToString()))
+                                        if (module.ModuleName.Equals(ClassRoom.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.Cloudbanc = Active;
+                                            UniteEDTeacher.Properties.Settings.Default.Classroom = module.Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
-                                        if (ModuleData.Contains(ClassRoom.ToString()))
+                                        if (module.ModuleName.Equals(MyCourses.ToString()))
                                         {
-                                            UniteEDTeacher.Properties.Settings.Default.Classroom = Active;
+                                            UniteEDTeacher.Properties.Settings.Default.Courses = module.Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
-                                        if (ModuleData.Contains(MyCourses.ToString()))
-                                        {
-                                            UniteEDTeacher.Properties.Settings.Default.Courses = Active;
-                                            UniteEDTeacher.Properties.Settings.Default.Save();
-                                        }
-
                                     }
-
                                 }
 
                             }
