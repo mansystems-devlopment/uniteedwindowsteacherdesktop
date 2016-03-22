@@ -285,17 +285,26 @@ namespace UniteEDTeacher.Views
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)
+        {            
+           this.Invoke((MethodInvoker)delegate
+           {
+             callDashboardButtons();
+           });            
+            
+        }
+
+        private void callDashboardButtons()
         {
             try
-            {
+            {              
                 string Smartlink = UniteEDTeacher.Properties.Settings.Default.SmartLink;
-                if (Smartlink.Contains("True") || Smartlink.Contains("true"))
+                if (Smartlink.Equals("True") || Smartlink.Equals("true"))
                 {
                     btnSmartLink.Visible = true;
                 }
 
                 string Mybooks = UniteEDTeacher.Properties.Settings.Default.MyBooks;
-                if (Mybooks.Contains("True") || Mybooks.Contains("true"))
+                if (Mybooks.Equals("True") || Mybooks.Equals("true"))
                 {
                     btnBookStore.Visible = true;
                 }
@@ -306,24 +315,24 @@ namespace UniteEDTeacher.Views
                 }
 
                 string MyClassRoom = UniteEDTeacher.Properties.Settings.Default.Classroom;
-                if (MyClassRoom.Contains("True") || MyClassRoom.Contains("true"))
+                if (MyClassRoom.Equals("True") || MyClassRoom.Equals("true"))
                 {
                     btnClassRoom.Visible = true;
                 }
 
                 string MyCourses = UniteEDTeacher.Properties.Settings.Default.Courses;
-                if (MyCourses.Contains("True") || MyCourses.Contains("true"))
+                if (MyCourses.Equals("True") || MyCourses.Equals("true"))
                 {
                     btnMyCourses.Visible = true;
                 }
 
                 string Cloudbanc = UniteEDTeacher.Properties.Settings.Default.Cloudbanc;
-                if (Cloudbanc.Contains("True") || Cloudbanc.Contains("true"))
+                if (Cloudbanc.Equals("True") || Cloudbanc.Equals("true"))
                 {
                     btnCloudbanc.Visible = true;
                 }
                 string EduDoc = UniteEDTeacher.Properties.Settings.Default.EduDoc;
-                if (EduDoc.Contains("True") || EduDoc.Contains("true"))
+                if (EduDoc.Equals("True") || EduDoc.Equals("true"))
                 {
                     btnEContent.Visible = true;
                 }
@@ -332,7 +341,6 @@ namespace UniteEDTeacher.Views
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
 
         
