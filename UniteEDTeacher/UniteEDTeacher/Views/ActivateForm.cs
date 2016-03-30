@@ -130,7 +130,14 @@ namespace UniteEDTeacher
                                         {
                                             if (moduleSetting.SettingName.Equals("SmartLinkpassword"))
                                             {
-                                                smartLinkPassword = moduleSetting.SettingData.ToString();
+                                                if (moduleSetting.SettingData == null)
+                                                {
+                                                    smartLinkPassword = " ".ToString();
+                                                }
+                                                else
+                                                {
+                                                    smartLinkPassword = moduleSetting.SettingData.ToString();
+                                                }
                                             }
                                         }
                                         
@@ -145,7 +152,7 @@ namespace UniteEDTeacher
                                         showDashboard();
                                     });
 
-                                    MessageBox.Show("Your password is '" + smartLinkPassword + "' and can be found in your settings.", "Successfully activated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Your password is '" + smartLinkPassword + "' and can be found in your settings." + "\r\n" + "Please restart your application to refresh your settings", "Successfully activated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 }
                                 else
@@ -170,7 +177,13 @@ namespace UniteEDTeacher
                             Debug.WriteLine(ex.Message + "\n" + ex.StackTrace);
                             MessageBox.Show(ex.Message);
 
-
+                            this.Invoke(
+                               (Action)(() =>
+                               {
+                                 pictureBox2.Visible = false;
+                                 btnActivate.Visible = true;
+                                 txtUserid.Enabled = true;
+                          }));
                         }
                     }, "ActivateUser?about", postData);
 
