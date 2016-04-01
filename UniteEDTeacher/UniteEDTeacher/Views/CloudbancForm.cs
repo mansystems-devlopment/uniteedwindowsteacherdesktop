@@ -49,7 +49,7 @@ namespace UniteEDTeacher.Views
                 Action action = new Action(() =>
                 {
 
-                    DisplayOutput(string.Format("URL: {0}, Status Code: {1}", args.Url, args.HttpStatusCode));
+                    //DisplayOutput(string.Format("URL: {0}, Status Code: {1}", args.Url, args.HttpStatusCode));
                     pictureBox1.Visible = false;
 
                 });

@@ -59,7 +59,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.outputLabel);
             this.splitContainer1.Panel2.Controls.Add(this.statusLabel);
             this.splitContainer1.Size = new System.Drawing.Size(1517, 742);
-            this.splitContainer1.SplitterDistance = 692;
+            this.splitContainer1.SplitterDistance = 691;
             this.splitContainer1.TabIndex = 0;
             // 
             // panel1
@@ -69,7 +69,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1517, 692);
+            this.panel1.Size = new System.Drawing.Size(1517, 691);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -79,7 +79,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1517, 692);
+            this.pictureBox1.Size = new System.Drawing.Size(1517, 691);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -88,7 +88,7 @@
             // 
             this.outputLabel.AutoSize = true;
             this.outputLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.outputLabel.Location = new System.Drawing.Point(0, 12);
+            this.outputLabel.Location = new System.Drawing.Point(0, 13);
             this.outputLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(0, 17);
@@ -98,7 +98,7 @@
             // 
             this.statusLabel.AutoSize = true;
             this.statusLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusLabel.Location = new System.Drawing.Point(0, 29);
+            this.statusLabel.Location = new System.Drawing.Point(0, 30);
             this.statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(0, 17);
