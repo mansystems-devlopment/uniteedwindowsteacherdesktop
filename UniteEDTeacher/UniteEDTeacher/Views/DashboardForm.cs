@@ -331,11 +331,11 @@ namespace UniteEDTeacher.Views
                 {
                     btnCloudbanc.Visible = true;
                 }
-                string EduDoc = UniteEDTeacher.Properties.Settings.Default.EduDoc;
+                /*string EduDoc = UniteEDTeacher.Properties.Settings.Default.EduDoc;
                 if (EduDoc.Equals("True") || EduDoc.Equals("true"))
                 {
                     btnEContent.Visible = true;
-                }
+                }*/
             }
             catch (Exception ex)
             {

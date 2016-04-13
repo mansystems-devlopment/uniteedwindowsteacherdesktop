@@ -265,11 +265,11 @@ namespace UniteEDTeacher
                                             UniteEDTeacher.Properties.Settings.Default.Reader = module.Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
                                         }
-                                        if (module.ModuleName.Equals(EduDoc.ToString()))
+                                        /*if (module.ModuleName.Equals(EduDoc.ToString()))
                                         {
                                             UniteEDTeacher.Properties.Settings.Default.EduDoc = module.Active;
                                             UniteEDTeacher.Properties.Settings.Default.Save();
-                                        }
+                                        }*/
                                         if (module.ModuleName.Equals(Cloudbanc.ToString()))
                                         {
                                             UniteEDTeacher.Properties.Settings.Default.Cloudbanc = module.Active;

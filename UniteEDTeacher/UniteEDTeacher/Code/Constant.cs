@@ -12,8 +12,8 @@ namespace UniteEDTeacher.Code
         public static string appVersion = "1.0.0";
         public static string appPackName = "com.mansystems.uniteED.windows.desktop.teacher";
         //public static string baseURL = "http://localhost:8281/rest/";
-        //public static string baseURL = "http://vandyk.unite-ed.org:91/rest/";
-        public static string baseURL = "https://dev.unite-ed.org:82/rest/";
+        public static string baseURL = "http://vandyk.unite-ed.org:91/rest/";
+        //public static string baseURL = "https://dev.unite-ed.org:82/rest/";
         //public static string baseURL = "https://thornview.unite-ed.org:81/rest/";
         //public static string baseURL = "https://vandyk.unite-ed.org:83/rest/";  (Not in Use anymore)
     }

@@ -37,7 +37,7 @@ namespace UniteEDTeacher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public string SmartLink {
             get {
                 return ((string)(this["SmartLink"]));
@@ -49,7 +49,7 @@ namespace UniteEDTeacher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public string Reader {
             get {
                 return ((string)(this["Reader"]));
@@ -61,7 +61,7 @@ namespace UniteEDTeacher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public string MyBooks {
             get {
                 return ((string)(this["MyBooks"]));
@@ -73,7 +73,7 @@ namespace UniteEDTeacher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public string Classroom {
             get {
                 return ((string)(this["Classroom"]));
@@ -85,7 +85,7 @@ namespace UniteEDTeacher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public string Courses {
             get {
                 return ((string)(this["Courses"]));
@@ -97,25 +97,13 @@ namespace UniteEDTeacher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public string Cloudbanc {
             get {
                 return ((string)(this["Cloudbanc"]));
             }
             set {
                 this["Cloudbanc"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EduDoc {
-            get {
-                return ((string)(this["EduDoc"]));
-            }
-            set {
-                this["EduDoc"] = value;
             }
         }
     }
