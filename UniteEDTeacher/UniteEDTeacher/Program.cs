@@ -1,4 +1,5 @@
 ﻿using CefSharp;
+using Squirrel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace UniteEDTeacher
             Application.SetCompatibleTextRenderingDefault(false);
             if (UniteEDTeacher.Properties.Settings.Default.activated)
             {
+                checkForUpdates();
                 Application.Run(new DashboardForm());
             }
             else
@@ -30,6 +32,14 @@ namespace UniteEDTeacher
                 Application.Run(new ActivateForm());
             }
 
+        }
+
+        private async static void checkForUpdates()
+        {
+            using (var mgr = new UpdateManager("C:\\Projects\\MyApp\\Releases"))
+            {
+                await mgr.UpdateApp();
+            } 
         }
     }
 }
