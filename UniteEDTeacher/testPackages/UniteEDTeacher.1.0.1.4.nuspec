@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>UniteEDTeacher</id>
+        <version>1.0.1.4</version>
+        <authors>Mansystems South Africa</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>UniteED Teacher App.</description>
+    </metadata>
+	 <files>
+        <file src="bin\x86\Release\*.dll" target="lib\net45\"></file>
+        <file src="bin\x86\Release\*.exe" exclude="**\*.vshost.exe" target="lib\net45\"></file>
+        <file src="bin\x86\Release\*.config" target="lib\net45\"></file>
+    </files>
+    <files>
+        <file src="..\UniteEDTeacher\bin\x86\Release\cef.pak" target="lib\net45\cef.pak" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\CefSharp.BrowserSubprocess.Core.dll" target="lib\net45\CefSharp.BrowserSubprocess.Core.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\CefSharp.BrowserSubprocess.exe" target="lib\net45\CefSharp.BrowserSubprocess.exe" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\CefSharp.Core.dll" target="lib\net45\CefSharp.Core.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\CefSharp.Core.xml" target="lib\net45\CefSharp.Core.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\CefSharp.dll" target="lib\net45\CefSharp.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\CefSharp.WinForms.dll" target="lib\net45\CefSharp.WinForms.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\CefSharp.WinForms.xml" target="lib\net45\CefSharp.WinForms.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\CefSharp.xml" target="lib\net45\CefSharp.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\cef_100_percent.pak" target="lib\net45\cef_100_percent.pak" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\cef_200_percent.pak" target="lib\net45\cef_200_percent.pak" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\d3dcompiler_43.dll" target="lib\net45\d3dcompiler_43.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\d3dcompiler_47.dll" target="lib\net45\d3dcompiler_47.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\debug.log" target="lib\net45\debug.log" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\DeltaCompressionDotNet.dll" target="lib\net45\DeltaCompressionDotNet.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\DeltaCompressionDotNet.MsDelta.dll" target="lib\net45\DeltaCompressionDotNet.MsDelta.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\DeltaCompressionDotNet.PatchApi.dll" target="lib\net45\DeltaCompressionDotNet.PatchApi.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\devtools_resources.pak" target="lib\net45\devtools_resources.pak" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\ffmpegsumo.dll" target="lib\net45\ffmpegsumo.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\ICSharpCode.SharpZipLib.dll" target="lib\net45\ICSharpCode.SharpZipLib.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\ICSharpCode.SharpZipLib.xml" target="lib\net45\ICSharpCode.SharpZipLib.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\icudtl.dat" target="lib\net45\icudtl.dat" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\libcef.dll" target="lib\net45\libcef.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\libEGL.dll" target="lib\net45\libEGL.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\libGLESv2.dll" target="lib\net45\libGLESv2.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Microsoft.Data.Edm.dll" target="lib\net45\Microsoft.Data.Edm.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Microsoft.Data.Edm.xml" target="lib\net45\Microsoft.Data.Edm.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Microsoft.Data.OData.dll" target="lib\net45\Microsoft.Data.OData.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Microsoft.Data.OData.xml" target="lib\net45\Microsoft.Data.OData.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Microsoft.Data.Services.Client.dll" target="lib\net45\Microsoft.Data.Services.Client.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Microsoft.Data.Services.Client.xml" target="lib\net45\Microsoft.Data.Services.Client.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Mono.Cecil.dll" target="lib\net45\Mono.Cecil.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Mono.Cecil.Mdb.dll" target="lib\net45\Mono.Cecil.Mdb.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Mono.Cecil.Pdb.dll" target="lib\net45\Mono.Cecil.Pdb.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Mono.Cecil.Rocks.dll" target="lib\net45\Mono.Cecil.Rocks.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Newtonsoft.Json.dll" target="lib\net45\Newtonsoft.Json.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Newtonsoft.Json.xml" target="lib\net45\Newtonsoft.Json.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\NuGet.Squirrel.dll" target="lib\net45\NuGet.Squirrel.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\NuGet.Squirrel.pdb" target="lib\net45\NuGet.Squirrel.pdb" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\pdf.dll" target="lib\net45\pdf.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Splat.dll" target="lib\net45\Splat.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Splat.pdb" target="lib\net45\Splat.pdb" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Squirrel.dll" target="lib\net45\Squirrel.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\Squirrel.pdb" target="lib\net45\Squirrel.pdb" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\System.Net.Http.Extensions.dll" target="lib\net45\System.Net.Http.Extensions.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\System.Net.Http.Extensions.xml" target="lib\net45\System.Net.Http.Extensions.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\System.Net.Http.Primitives.dll" target="lib\net45\System.Net.Http.Primitives.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\System.Net.Http.Primitives.xml" target="lib\net45\System.Net.Http.Primitives.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\System.Spatial.dll" target="lib\net45\System.Spatial.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\System.Spatial.xml" target="lib\net45\System.Spatial.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\UniteEDTeacher.application" target="lib\net45\UniteEDTeacher.application" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\UniteEDTeacher.exe" target="lib\net45\UniteEDTeacher.exe" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\UniteEDTeacher.exe.config" target="lib\net45\UniteEDTeacher.exe.config" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\UniteEDTeacher.exe.manifest" target="lib\net45\UniteEDTeacher.exe.manifest" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\zxing.dll" target="lib\net45\zxing.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\zxing.pdb" target="lib\net45\zxing.pdb" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\zxing.presentation.dll" target="lib\net45\zxing.presentation.dll" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\zxing.presentation.xml" target="lib\net45\zxing.presentation.xml" />
+        <file src="..\UniteEDTeacher\bin\x86\Release\zxing.xml" target="lib\net45\zxing.xml" />
+    </files>
+</package>

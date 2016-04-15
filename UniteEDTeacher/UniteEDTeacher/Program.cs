@@ -36,9 +36,9 @@ namespace UniteEDTeacher
 
         private async static void checkForUpdates()
         {
-            using (var mgr = new UpdateManager("C:\\Projects\\MyApp\\Releases"))
+            using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/mansystems-devlopment/uniteedwindowsteacherdesktop/tree/master/UniteEDTeacher"))
             {
-                await mgr.UpdateApp();
+                await mgr.Result.UpdateApp();
             } 
         }
     }
